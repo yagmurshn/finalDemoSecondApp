@@ -1,0 +1,13 @@
+@import '~nucal-widget-lib/src/assets/styles/widget-icons.scss';
+@font-face {
+  font-family: 'widgetlib';
+  src: url('~nucal-widget-lib/src/assets/fonts/widgetlib.eot');
+  src: url('~nucal-widget-lib/src/assets/fonts/widgetlib.eot#iefix') format('embedded-opentype'),
+    url('~nucal-widget-lib/src/assets/fonts/widgetlib.woff2') format('woff2'), url('~nucal-widget-lib/src/assets/fonts/widgetlib.ttf') format('truetype'),
+    url('~nucal-widget-lib/src/assets/fonts/widgetlib.woff') format('woff'), url('~nucal-widget-lib/src/assets/fonts/widgetlib.svg#widgetlib') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@import '~nucal-widget-lib/src/assets/styles/font-awesome-all.css';

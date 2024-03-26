@@ -1,0 +1,68 @@
+{
+  "name": "nucal-ui-application",
+  "version": "0.1.0",
+  "description": "NUCAL Frontend Application",
+  "scripts": {
+    "setup": "npm install && vue-cli-service lint --fix",
+    "lint": "vue-cli-service lint",
+    "fix": "eslint --fix .",
+    "build:web": "vue-cli-service lint --fix && export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build --mode production.web --env.production --env.web",
+    "serve:web": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve --mode development.web --env.development --env.web",
+    "setup-webpack-config": "node ./node_modules/vue-cli-plugin-vuexp/lib/scripts/webpack-maintenance pre",
+    "version-check": "vue -V && nativescript --version && pod --version && npm -v && node -v && tns --version && xcodebuild -version",
+    "remove-webpack-config": "node ./node_modules/vue-cli-plugin-vuexp/lib/scripts/webpack-maintenance post"
+  },
+  "dependencies": {
+    "lodash-es": "4.17.21",
+    "nucal-widget-lib": "0.13.52",
+    "vue": "2.7.15",
+    "vue-router": "3.6.5",
+    "vuex": "3.6.2",
+    "axios": "1.6.2",
+    "lodash.clonedeep": "4.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.23.6",
+    "@babel/plugin-transform-nullish-coalescing-operator": "7.23.4",
+    "@babel/plugin-transform-optional-chaining": "7.23.4",
+    "@babel/preset-env": "7.23.6",
+    "@babel/traverse": "7.23.6",
+    "@babel/eslint-parser": "7.23.3",
+    "@vue/cli-plugin-babel": "5.0.8",
+    "@vue/cli-plugin-eslint": "5.0.8",
+    "@vue/cli-service": "5.0.8",
+    "@vue/eslint-config-airbnb": "7.0.0",
+    "@vue/eslint-config-prettier": "8.0.0",
+    "babel-loader": "8.3.0",
+    "eslint": "8.55.0",
+    "eslint-plugin-vue": "9.19.2",
+    "lint-staged": "15.2.0",
+    "node-sass": "8.0.0",
+    "sass-loader": "13.3.2",
+    "webpack": "5.89.0",
+    "webpack-cli": "5.1.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "eslintIgnore": [
+    "webpack.config.js"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "overrides": {
+    "autoprefixer": "10.4.5"
+  }
+}
