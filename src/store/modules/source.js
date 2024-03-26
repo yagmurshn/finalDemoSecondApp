@@ -28,6 +28,23 @@ export default {
           throw new Error('Execute onload could not be sent!');
         });
     },
+    saveRecord(context, payload) {
+      const url = 'https://api.airtable.com/v0/appowVLaDxd4jCBPI/tbl0rHvw7lOWPcPjH';
+      axios.defaults.headers.common.Authorization = 'Bearer patYrMLMZW8KWfcI4.0888aac59fa50c9f4f5107d94e60e3f66501bf79d85b24d6333d156f17df9446';
+      axios.defaults.headers.common['Content-Type'] = 'application/json';
+      return axios
+        .post(url, payload)
+        .then((response) => {
+          // eslint-disable-next-line no-console
+          console.log(response);
+          return true;
+        })
+        .catch((err) => {
+          // eslint-disable-next-line no-console
+          console.error('Error on saveRecord', err);
+          throw new Error('Record could not be saved!');
+        });
+    },
   },
   getters: {
     getApiMappingWithChain: (state) => (completion) => {

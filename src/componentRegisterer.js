@@ -9,6 +9,6 @@ export default function registerComponents(Vue) {
     const component = widgetComponents[prop];
     Vue.component(prop, component);
   }
-  
+
   Vue.use(VxpCoreRegister);
 }
