@@ -1590,24 +1590,23 @@ export default {
       return this.getApiMappingWithChain(chain);
     },
     createRecord() {
-      // const payload = {
-      //   records: [
-      //     {
-      //       fields: {
-      //         FullName: this.$refs.fullName.$el.value,
-      //         Email: this.$refs.email.$el.value,
-      //         Address: this.$refs.address.$el.value,
-      //         PhoneNumber: parseFloat(this.$refs.phone.$el.value),
-      //         City: this.$refs.city.$el.value,
-      //         Country: this.$refs.country.$el.value,
-      //       },
-      //     },
-      //   ],
-      // };
-      // this.saveRecord(payload).then(() => {
-      //   this.$router.push('Screen+2');
-      // });
-      this.$router.push('Screen+2');
+      const payload = {
+        records: [
+          {
+            fields: {
+              FullName: this.$refs.fullName.$el.value,
+              Email: this.$refs.email.$el.value,
+              Address: this.$refs.address.$el.value,
+              PhoneNumber: parseFloat(this.$refs.phone.$el.value),
+              City: this.$refs.city.$el.value,
+              Country: this.$refs.country.$el.value,
+            },
+          },
+        ],
+      };
+      this.saveRecord(payload).then(() => {
+        this.$router.push('Screen+2');
+      });
     },
   },
   watch: {},
