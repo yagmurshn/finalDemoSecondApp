@@ -1,634 +1,119 @@
 <template>
-  <DropZone
-    ncBgType="bgColor"
-    background=""
-    backgroundImage=""
-    id="07692a07-229e-4f49-8630-cbdc38468d13"
-    v-bind:style="{ text: 'SUBMIT', width: '100%', height: 'auto' }"
-  >
-    <SectionContainer
-      v-bind:snapX="false"
-      v-bind:snapY="false"
-      v-bind:isLock="false"
-      ncBgType="bgImage"
-      position="relative"
-      ncTooltipText=""
-      backgroundImage="https://file.dev.nucal.com/5d3dc32d998c020bb22a126f171a370407da5c8e/public/0463c18a-bdbc-434d-aad2-23c9e220d462"
-      id="557f714f-faf0-4447-b40e-497f3d2a40b9"
-      v-bind:style="{
-        width: '100%',
-        height: '100%',
-        zIndex: 34,
-        tabIndex: '-1',
-        boxShadow: '',
-        marginTop: '0px',
-        marginLeft: '0px',
-        paddingTop: '',
-        visibility: 'visible',
-        borderColor: '#21CA21',
-        borderStyle: 'none',
-        marginRight: '0px',
-        paddingLeft: '',
-        marginBottom: '0px',
-        paddingRight: '',
-        paddingBottom: '',
-        borderTopWidth: '1px',
-        textDecoration: 'none',
-        borderLeftWidth: '1px',
-        borderRightWidth: '1px',
-        borderBottomWidth: '1px',
-        borderTopLeftRadius: '0px',
-        borderTopRightRadius: '0px',
-        borderBottomLeftRadius: '0px',
-        borderBottomRightRadius: '0px',
-      }"
+  <div>
+    <div v-if="isProgressBarVisible" class="progress-overlay">
+      <div class="progress-bar"></div>
+    </div>
+    <DropZone
+      ncBgType="bgColor"
+      background=""
+      backgroundImage=""
+      id="07692a07-229e-4f49-8630-cbdc38468d13"
+      v-bind:style="{ text: 'SUBMIT', width: '100%', height: 'auto' }"
     >
-      <TextInput
-        ref="fullName"
+      <SectionContainer
         v-bind:snapX="false"
         v-bind:snapY="false"
-        value=""
-        v-bind:rotate="0"
-        opacity="1"
-        ncBgType="bgColor"
+        v-bind:isLock="false"
+        ncBgType="bgImage"
         position="relative"
-        v-bind:readonly="false"
-        inputType="text"
-        v-bind:isEnabled="true"
-        maxLength=""
-        placeholder="John Doe"
-        animationName=""
         ncTooltipText=""
-        ncFocusFontColor="#292929"
-        ncHoverFontColor="#939393"
-        placeholderColor="#C1C1C1FF"
-        ncFocusBorderColor="#292929"
-        ncHoverBorderColor="#5B5B5B66"
-        ncFocusBackgroundColor="transparent"
-        ncHoverBackgroundColor="transparent"
-        id="b7e81364-1020-4e80-8532-3d14d1d09e94"
+        backgroundImage="https://file.dev.nucal.com/5d3dc32d998c020bb22a126f171a370407da5c8e/public/0463c18a-bdbc-434d-aad2-23c9e220d462"
+        id="557f714f-faf0-4447-b40e-497f3d2a40b9"
         v-bind:style="{
-          color: '#292929',
           width: '100%',
-          filter: 'none',
           height: '100%',
-          zIndex: 36,
+          zIndex: 34,
+          tabIndex: '-1',
           boxShadow: '',
-          fontStyle: 'normal',
           marginTop: '0px',
-          textAlign: 'left',
-          background: 'transparent',
-          fontFamily: 'Inter',
-          fontWeight: 300,
-          lineHeight: 'normal',
           marginLeft: '0px',
-          paddingTop: '0px',
-          textIndent: '0px',
-          visibility: 'visible',
-          borderColor: '#5B5B5BFF',
-          borderStyle: 'solid',
-          marginRight: '0px',
-          paddingLeft: '0px',
-          wordSpacing: '0px',
-          marginBottom: '0px',
-          mixBlendMode: 'normal',
-          paddingRight: '0px',
-          letterSpacing: '0px',
-          paddingBottom: '0px',
-          textTransform: 'none',
-          backdropFilter: 'none(0%)',
-          borderTopWidth: '0',
-          textDecoration: 'none',
-          borderLeftWidth: '0',
-          borderRightWidth: '0',
-          borderBottomWidth: '1px',
-          borderTopLeftRadius: '0',
-          borderTopRightRadius: '0',
-          borderBottomLeftRadius: '0',
-          borderBottomRightRadius: '0',
-        }"
-      />
-      <WTextFormatting
-        text="Full Name"
-        color="#000000"
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        v-bind:rotate="0"
-        position="relative"
-        highlight="transparent"
-        background="transparent"
-        v-bind:isClipping="false"
-        animationName=""
-        ncTooltipText=""
-        id="606e503b-7334-466c-8be8-680fe58f26d2"
-        v-bind:style="{
-          dir: 'ltr',
-          width: '100%',
-          bqCite: '',
-          filter: 'none',
-          height: '100%',
-          zIndex: 37,
-          fontStyle: 'normal',
-          marginTop: '0px',
-          textAlign: 'left',
-          fontFamily: 'Roboto',
-          fontWeight: 300,
-          lineHeight: '1.4',
-          marginLeft: '0px',
-          paddingTop: '0px',
-          textIndent: '0px',
-          visibility: 'visible',
-          whiteSpace: 'pre-wrap',
-          marginRight: '0px',
-          paddingLeft: '0px',
-          wordSpacing: '0px',
-          marginBottom: '0px',
-          mixBlendMode: 'normal',
-          paddingRight: '0px',
-          letterSpacing: '0px',
-          paddingBottom: '0px',
-          textTransform: 'none',
-          backdropFilter: 'none',
-          textDecoration: 'none',
-          textFormatting: 'p',
-        }"
-      />
-      <WTextFormatting
-        text="Customer Form‎"
-        color="#000000"
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        v-bind:rotate="0"
-        position="relative"
-        highlight="transparent"
-        background="transparent"
-        v-bind:isClipping="false"
-        ncTypography="custom"
-        animationName=""
-        ncTooltipText=""
-        id="5e0c0285-2426-4099-90e4-6160e7b1c239"
-        v-bind:style="{
-          dir: 'ltr',
-          width: '100%',
-          bqCite: '',
-          filter: 'none',
-          height: '100%',
-          zIndex: 38,
-          fontStyle: 'normal',
-          marginTop: '0px',
-          textAlign: 'left',
-          fontFamily: 'Roboto',
-          fontWeight: 300,
-          lineHeight: '1.4',
-          marginLeft: '0px',
-          paddingTop: '0px',
-          textIndent: '0px',
-          visibility: 'visible',
-          whiteSpace: 'pre-wrap',
-          marginRight: '0px',
-          paddingLeft: '0px',
-          wordSpacing: '0px',
-          marginBottom: '0px',
-          mixBlendMode: 'normal',
-          paddingRight: '0px',
-          letterSpacing: '0px',
-          paddingBottom: '0px',
-          textTransform: 'none',
-          backdropFilter: 'none',
-          textDecoration: 'none',
-          textFormatting: 'p',
-        }"
-      />
-      <WTextFormatting
-        text="Email ‎"
-        color="#000000"
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        v-bind:rotate="0"
-        position="relative"
-        highlight="transparent"
-        background="transparent"
-        v-bind:isClipping="false"
-        animationName=""
-        ncTooltipText=""
-        id="2a4cdccb-0d5c-4273-8706-9ee4a57994b8"
-        v-bind:style="{
-          dir: 'ltr',
-          width: '100%',
-          bqCite: '',
-          filter: 'none',
-          height: '100%',
-          zIndex: 39,
-          fontStyle: 'normal',
-          marginTop: '0px',
-          textAlign: 'left',
-          fontFamily: 'Roboto',
-          fontWeight: 300,
-          lineHeight: '1.4',
-          marginLeft: '0px',
-          paddingTop: '0px',
-          textIndent: '0px',
-          visibility: 'visible',
-          whiteSpace: 'pre-wrap',
-          marginRight: '0px',
-          paddingLeft: '0px',
-          wordSpacing: '0px',
-          marginBottom: '0px',
-          mixBlendMode: 'normal',
-          paddingRight: '0px',
-          letterSpacing: '0px',
-          paddingBottom: '0px',
-          textTransform: 'none',
-          backdropFilter: 'none',
-          textDecoration: 'none',
-          textFormatting: 'p',
-        }"
-      />
-      <TextInput
-        ref="email"
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        value=""
-        v-bind:rotate="0"
-        opacity="1"
-        ncBgType="bgColor"
-        position="relative"
-        v-bind:readonly="false"
-        inputType="text"
-        v-bind:isEnabled="true"
-        maxLength=""
-        placeholder="johndoe@email.com"
-        animationName=""
-        ncTooltipText=""
-        ncFocusFontColor="#292929"
-        ncHoverFontColor="#939393"
-        placeholderColor="#C1C1C1FF"
-        ncFocusBorderColor="#292929"
-        ncHoverBorderColor="#5B5B5B66"
-        ncFocusBackgroundColor="transparent"
-        ncHoverBackgroundColor="transparent"
-        id="fb23d698-e98b-43ee-864b-6c648a428bea"
-        v-bind:style="{
-          color: '#292929',
-          width: '100%',
-          filter: 'none',
-          height: '100%',
-          zIndex: 40,
-          boxShadow: '',
-          fontStyle: 'normal',
-          marginTop: '0px',
-          textAlign: 'left',
-          background: 'transparent',
-          fontFamily: 'Inter',
-          fontWeight: 300,
-          lineHeight: 'normal',
-          marginLeft: '0px',
-          paddingTop: '0px',
-          textIndent: '0px',
-          visibility: 'visible',
-          borderColor: '#292929',
-          borderStyle: 'solid',
-          marginRight: '0px',
-          paddingLeft: '0px',
-          wordSpacing: '0px',
-          marginBottom: '0px',
-          mixBlendMode: 'normal',
-          paddingRight: '0px',
-          letterSpacing: '0px',
-          paddingBottom: '0px',
-          textTransform: 'none',
-          backdropFilter: 'none',
-          borderTopWidth: '0',
-          textDecoration: 'none',
-          borderLeftWidth: '0',
-          borderRightWidth: '0',
-          borderBottomWidth: '1px',
-          borderTopLeftRadius: '0',
-          borderTopRightRadius: '0',
-          borderBottomLeftRadius: '0',
-          borderBottomRightRadius: '0',
-        }"
-      />
-      <WTextFormatting
-        text="Phone Number"
-        color="#000000"
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        v-bind:rotate="0"
-        position="relative"
-        highlight="transparent"
-        background="transparent"
-        v-bind:isClipping="false"
-        animationName=""
-        ncTooltipText=""
-        id="71abcefc-646c-4c8b-8236-f1f57acea357"
-        v-bind:style="{
-          dir: 'ltr',
-          width: '100%',
-          bqCite: '',
-          filter: 'none',
-          height: '100%',
-          zIndex: 41,
-          fontStyle: 'normal',
-          marginTop: '0px',
-          textAlign: 'left',
-          fontFamily: 'Roboto',
-          fontWeight: 300,
-          lineHeight: '1.4',
-          marginLeft: '0px',
-          paddingTop: '0px',
-          textIndent: '0px',
-          visibility: 'visible',
-          whiteSpace: 'pre-wrap',
-          marginRight: '0px',
-          paddingLeft: '0px',
-          wordSpacing: '0px',
-          marginBottom: '0px',
-          mixBlendMode: 'normal',
-          paddingRight: '0px',
-          letterSpacing: '0px',
-          paddingBottom: '0px',
-          textTransform: 'none',
-          backdropFilter: 'none',
-          textDecoration: 'none',
-          textFormatting: 'p',
-        }"
-      />
-      <TextInput
-        ref="phone"
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        value=""
-        v-bind:rotate="0"
-        opacity="1"
-        ncBgType="bgColor"
-        position="relative"
-        v-bind:readonly="false"
-        inputType="text"
-        v-bind:isEnabled="true"
-        maxLength=""
-        placeholder="0(123) 456-7890"
-        animationName=""
-        ncTooltipText=""
-        ncFocusFontColor="#292929"
-        ncHoverFontColor="#939393"
-        placeholderColor="#C1C1C1FF"
-        ncFocusBorderColor="#292929"
-        ncHoverBorderColor="#5B5B5B66"
-        ncFocusBackgroundColor="transparent"
-        ncHoverBackgroundColor="transparent"
-        id="f86bf4ac-6a77-4894-81e1-bed8476a6839"
-        v-bind:style="{
-          color: '#292929',
-          width: '100%',
-          filter: 'none',
-          height: '100%',
-          zIndex: 42,
-          boxShadow: '',
-          fontStyle: 'normal',
-          marginTop: '0px',
-          textAlign: 'left',
-          background: 'transparent',
-          fontFamily: 'Inter',
-          fontWeight: 300,
-          lineHeight: 'normal',
-          marginLeft: '0px',
-          paddingTop: '0px',
-          textIndent: '0px',
-          visibility: 'visible',
-          borderColor: '#292929',
-          borderStyle: 'solid',
-          marginRight: '0px',
-          paddingLeft: '0px',
-          wordSpacing: '0px',
-          marginBottom: '0px',
-          mixBlendMode: 'normal',
-          paddingRight: '0px',
-          letterSpacing: '0px',
-          paddingBottom: '0px',
-          textTransform: 'none',
-          backdropFilter: 'none',
-          borderTopWidth: '0',
-          textDecoration: 'none',
-          borderLeftWidth: '0',
-          borderRightWidth: '0',
-          borderBottomWidth: '1px',
-          borderTopLeftRadius: '0',
-          borderTopRightRadius: '0',
-          borderBottomLeftRadius: '0',
-          borderBottomRightRadius: '0',
-        }"
-      />
-      <WTextFormatting
-        text="Address‎"
-        color="#000000"
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        v-bind:rotate="0"
-        position="relative"
-        highlight="transparent"
-        background="transparent"
-        v-bind:isClipping="false"
-        animationName=""
-        ncTooltipText=""
-        id="6bc9e156-cfb2-4d0b-9f88-b862a1e8ace3"
-        v-bind:style="{
-          dir: 'ltr',
-          width: '100%',
-          bqCite: '',
-          filter: 'none',
-          height: '100%',
-          zIndex: 43,
-          fontStyle: 'normal',
-          marginTop: '0px',
-          textAlign: 'left',
-          fontFamily: 'Roboto',
-          fontWeight: 300,
-          lineHeight: '1.4',
-          marginLeft: '0px',
-          paddingTop: '0px',
-          textIndent: '0px',
-          visibility: 'visible',
-          whiteSpace: 'pre-wrap',
-          marginRight: '0px',
-          paddingLeft: '0px',
-          wordSpacing: '0px',
-          marginBottom: '0px',
-          mixBlendMode: 'normal',
-          paddingRight: '0px',
-          letterSpacing: '0px',
-          paddingBottom: '0px',
-          textTransform: 'none',
-          backdropFilter: 'none',
-          textDecoration: 'none',
-          textFormatting: 'p',
-        }"
-      />
-      <TextInput
-        ref="address"
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        value=""
-        v-bind:rotate="0"
-        opacity="1"
-        ncBgType="bgColor"
-        position="relative"
-        v-bind:readonly="false"
-        inputType="text"
-        v-bind:isEnabled="true"
-        maxLength=""
-        placeholder="123 Main Street"
-        animationName=""
-        ncTooltipText=""
-        ncFocusFontColor="#292929"
-        ncHoverFontColor="#939393"
-        placeholderColor="#C1C1C1FF"
-        ncFocusBorderColor="#292929"
-        ncHoverBorderColor="#5B5B5B66"
-        ncFocusBackgroundColor="transparent"
-        ncHoverBackgroundColor="transparent"
-        id="71d9bf32-f625-46eb-86c5-c4adc2166b6b"
-        v-bind:style="{
-          color: '#292929',
-          width: '100%',
-          filter: 'none',
-          height: '100%',
-          zIndex: 44,
-          boxShadow: '',
-          fontStyle: 'normal',
-          marginTop: '0px',
-          textAlign: 'left',
-          background: 'transparent',
-          fontFamily: 'Inter',
-          fontWeight: 300,
-          lineHeight: 'normal',
-          marginLeft: '0px',
-          paddingTop: '0px',
-          textIndent: '0px',
-          visibility: 'visible',
-          borderColor: '#292929',
-          borderStyle: 'solid',
-          marginRight: '0px',
-          paddingLeft: '0px',
-          wordSpacing: '0px',
-          marginBottom: '0px',
-          mixBlendMode: 'normal',
-          paddingRight: '0px',
-          letterSpacing: '0px',
-          paddingBottom: '0px',
-          textTransform: 'none',
-          backdropFilter: 'none(0%)',
-          borderTopWidth: '0',
-          textDecoration: 'none',
-          borderLeftWidth: '0',
-          borderRightWidth: '0',
-          borderBottomWidth: '1px',
-          borderTopLeftRadius: '0',
-          borderTopRightRadius: '0',
-          borderBottomLeftRadius: '0',
-          borderBottomRightRadius: '0',
-        }"
-      />
-      <WButton
-        tag="button"
-        href=""
-        v-bind:pill="false"
-        size="md"
-        text="SUBMIT"
-        type="button"
-        v-bind:block="false"
-        color="#FFFFFF"
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        theme="theme--light01"
-        v-bind:rotate="0"
-        v-bind:squared="false"
-        variant="primary"
-        ncBgType="bgColor"
-        position="relative"
-        v-bind:isEnabled="true"
-        background="#151515FF"
-        linkTarget="_top"
-        ncLinkType="router_link"
-        borderColor="#007bff"
-        borderRadius="16px"
-        v-bind:resetTrigger="false"
-        animationName=""
-        ncTooltipText=""
-        verticalWidth="60px"
-        formTransition="none"
-        v-bind:nucalDataModel="{ type: 'NSW', isList: false, dynamic: false, structure: [{ type: 'string', propName: 'text', displayName: 'Value' }] }"
-        verticalHeight="60px"
-        horizontalWidth="72.4479px"
-        nucalScaleWidth=""
-        toForRouterLink=""
-        horizontalHeight="37.5347px"
-        ncClickFontColor="#FFFFFF"
-        ncFocusFontColor="#FFFFFF"
-        ncHoverFontColor="#FFFFFF"
-        nucalScaleHeight=""
-        ncClickBorderColor="#181818FF"
-        ncDisableFontColor="#FFFFFF"
-        ncFocusBorderColor="#181818FF"
-        ncHoverBorderColor="#151515B3"
-        ncDisableBorderColor="transparent"
-        ncClickBackgroundColor="#181818FF"
-        ncFocusBackgroundColor="#181818FF"
-        ncHoverBackgroundColor="linear-gradient(55deg, #1CC9AAFF 0%, #1CBFCDFF 98%)"
-        ncDisableBackgroundColor="#969696"
-        id="108277c7-dbbb-40c6-9698-cf65bb4bed51"
-        v-bind:style="{
-          width: '100%',
-          filter: 'none',
-          height: '100%',
-          zIndex: 45,
-          tabIndex: '0px',
-          boxShadow: '',
-          fontStyle: 'normal',
-          marginTop: '',
-          textAlign: 'center',
-          fontFamily: 'Open Sans',
-          fontWeight: 300,
-          lineHeight: '1.4',
-          marginLeft: '',
           paddingTop: '',
-          textIndent: '0px',
-          textShadow: '',
           visibility: 'visible',
-          whiteSpace: 'pre-wrap',
+          borderColor: '#21CA21',
           borderStyle: 'none',
-          marginRight: '',
+          marginRight: '0px',
           paddingLeft: '',
-          wordSpacing: '0px',
-          marginBottom: '',
-          mixBlendMode: 'normal',
+          marginBottom: '0px',
           paddingRight: '',
-          letterSpacing: '2px',
           paddingBottom: '',
-          textTransform: 'none',
-          backdropFilter: 'none',
           borderTopWidth: '1px',
           textDecoration: 'none',
           borderLeftWidth: '1px',
           borderRightWidth: '1px',
-          horizontalHeight: '37.5347px',
           borderBottomWidth: '1px',
-          borderTopLeftRadius: '16px',
-          borderTopRightRadius: '16px',
-          borderBottomLeftRadius: '16px',
-          borderBottomRightRadius: '16px',
+          borderTopLeftRadius: '0px',
+          borderTopRightRadius: '0px',
+          borderBottomLeftRadius: '0px',
+          borderBottomRightRadius: '0px',
         }"
-        @click.native="createRecord"
-      />
-      <Convergence
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        position="relative"
-        id="9bd84b9d-11ae-48a8-b8ac-355d6ebb3d6f"
-        v-bind:style="{ width: '100%', height: '100%', zIndex: 46 }"
       >
+        <TextInput
+          ref="fullName"
+          v-bind:snapX="false"
+          v-bind:snapY="false"
+          value=""
+          v-bind:rotate="0"
+          opacity="1"
+          ncBgType="bgColor"
+          position="relative"
+          v-bind:readonly="false"
+          inputType="text"
+          v-bind:isEnabled="true"
+          maxLength=""
+          placeholder="John Doe"
+          animationName=""
+          ncTooltipText=""
+          ncFocusFontColor="#292929"
+          ncHoverFontColor="#939393"
+          placeholderColor="#C1C1C1FF"
+          ncFocusBorderColor="#292929"
+          ncHoverBorderColor="#5B5B5B66"
+          ncFocusBackgroundColor="transparent"
+          ncHoverBackgroundColor="transparent"
+          id="b7e81364-1020-4e80-8532-3d14d1d09e94"
+          v-bind:style="{
+            color: '#292929',
+            width: '100%',
+            filter: 'none',
+            height: '100%',
+            zIndex: 36,
+            boxShadow: '',
+            fontStyle: 'normal',
+            marginTop: '0px',
+            textAlign: 'left',
+            background: 'transparent',
+            fontFamily: 'Inter',
+            fontWeight: 300,
+            lineHeight: 'normal',
+            marginLeft: '0px',
+            paddingTop: '0px',
+            textIndent: '0px',
+            visibility: 'visible',
+            borderColor: '#5B5B5BFF',
+            borderStyle: 'solid',
+            marginRight: '0px',
+            paddingLeft: '0px',
+            wordSpacing: '0px',
+            marginBottom: '0px',
+            mixBlendMode: 'normal',
+            paddingRight: '0px',
+            letterSpacing: '0px',
+            paddingBottom: '0px',
+            textTransform: 'none',
+            backdropFilter: 'none(0%)',
+            borderTopWidth: '0',
+            textDecoration: 'none',
+            borderLeftWidth: '0',
+            borderRightWidth: '0',
+            borderBottomWidth: '1px',
+            borderTopLeftRadius: '0',
+            borderTopRightRadius: '0',
+            borderBottomLeftRadius: '0',
+            borderBottomRightRadius: '0',
+          }"
+        />
         <WTextFormatting
-          text="City"
+          text="Full Name"
           color="#000000"
           v-bind:snapX="false"
           v-bind:snapY="false"
@@ -639,7 +124,748 @@
           v-bind:isClipping="false"
           animationName=""
           ncTooltipText=""
-          id="264b2522-8024-4c4b-9248-484f87cf4c67"
+          id="606e503b-7334-466c-8be8-680fe58f26d2"
+          v-bind:style="{
+            dir: 'ltr',
+            width: '100%',
+            bqCite: '',
+            filter: 'none',
+            height: '100%',
+            zIndex: 37,
+            fontStyle: 'normal',
+            marginTop: '0px',
+            textAlign: 'left',
+            fontFamily: 'Roboto',
+            fontWeight: 300,
+            lineHeight: '1.4',
+            marginLeft: '0px',
+            paddingTop: '0px',
+            textIndent: '0px',
+            visibility: 'visible',
+            whiteSpace: 'pre-wrap',
+            marginRight: '0px',
+            paddingLeft: '0px',
+            wordSpacing: '0px',
+            marginBottom: '0px',
+            mixBlendMode: 'normal',
+            paddingRight: '0px',
+            letterSpacing: '0px',
+            paddingBottom: '0px',
+            textTransform: 'none',
+            backdropFilter: 'none',
+            textDecoration: 'none',
+            textFormatting: 'p',
+          }"
+        />
+        <WTextFormatting
+          text="Customer Form‎"
+          color="#000000"
+          v-bind:snapX="false"
+          v-bind:snapY="false"
+          v-bind:rotate="0"
+          position="relative"
+          highlight="transparent"
+          background="transparent"
+          v-bind:isClipping="false"
+          ncTypography="custom"
+          animationName=""
+          ncTooltipText=""
+          id="5e0c0285-2426-4099-90e4-6160e7b1c239"
+          v-bind:style="{
+            dir: 'ltr',
+            width: '100%',
+            bqCite: '',
+            filter: 'none',
+            height: '100%',
+            zIndex: 38,
+            fontStyle: 'normal',
+            marginTop: '0px',
+            textAlign: 'left',
+            fontFamily: 'Roboto',
+            fontWeight: 300,
+            lineHeight: '1.4',
+            marginLeft: '0px',
+            paddingTop: '0px',
+            textIndent: '0px',
+            visibility: 'visible',
+            whiteSpace: 'pre-wrap',
+            marginRight: '0px',
+            paddingLeft: '0px',
+            wordSpacing: '0px',
+            marginBottom: '0px',
+            mixBlendMode: 'normal',
+            paddingRight: '0px',
+            letterSpacing: '0px',
+            paddingBottom: '0px',
+            textTransform: 'none',
+            backdropFilter: 'none',
+            textDecoration: 'none',
+            textFormatting: 'p',
+          }"
+        />
+        <WTextFormatting
+          text="Email ‎"
+          color="#000000"
+          v-bind:snapX="false"
+          v-bind:snapY="false"
+          v-bind:rotate="0"
+          position="relative"
+          highlight="transparent"
+          background="transparent"
+          v-bind:isClipping="false"
+          animationName=""
+          ncTooltipText=""
+          id="2a4cdccb-0d5c-4273-8706-9ee4a57994b8"
+          v-bind:style="{
+            dir: 'ltr',
+            width: '100%',
+            bqCite: '',
+            filter: 'none',
+            height: '100%',
+            zIndex: 39,
+            fontStyle: 'normal',
+            marginTop: '0px',
+            textAlign: 'left',
+            fontFamily: 'Roboto',
+            fontWeight: 300,
+            lineHeight: '1.4',
+            marginLeft: '0px',
+            paddingTop: '0px',
+            textIndent: '0px',
+            visibility: 'visible',
+            whiteSpace: 'pre-wrap',
+            marginRight: '0px',
+            paddingLeft: '0px',
+            wordSpacing: '0px',
+            marginBottom: '0px',
+            mixBlendMode: 'normal',
+            paddingRight: '0px',
+            letterSpacing: '0px',
+            paddingBottom: '0px',
+            textTransform: 'none',
+            backdropFilter: 'none',
+            textDecoration: 'none',
+            textFormatting: 'p',
+          }"
+        />
+        <TextInput
+          ref="email"
+          v-bind:snapX="false"
+          v-bind:snapY="false"
+          value=""
+          v-bind:rotate="0"
+          opacity="1"
+          ncBgType="bgColor"
+          position="relative"
+          v-bind:readonly="false"
+          inputType="text"
+          v-bind:isEnabled="true"
+          maxLength=""
+          placeholder="johndoe@email.com"
+          animationName=""
+          ncTooltipText=""
+          ncFocusFontColor="#292929"
+          ncHoverFontColor="#939393"
+          placeholderColor="#C1C1C1FF"
+          ncFocusBorderColor="#292929"
+          ncHoverBorderColor="#5B5B5B66"
+          ncFocusBackgroundColor="transparent"
+          ncHoverBackgroundColor="transparent"
+          id="fb23d698-e98b-43ee-864b-6c648a428bea"
+          v-bind:style="{
+            color: '#292929',
+            width: '100%',
+            filter: 'none',
+            height: '100%',
+            zIndex: 40,
+            boxShadow: '',
+            fontStyle: 'normal',
+            marginTop: '0px',
+            textAlign: 'left',
+            background: 'transparent',
+            fontFamily: 'Inter',
+            fontWeight: 300,
+            lineHeight: 'normal',
+            marginLeft: '0px',
+            paddingTop: '0px',
+            textIndent: '0px',
+            visibility: 'visible',
+            borderColor: '#292929',
+            borderStyle: 'solid',
+            marginRight: '0px',
+            paddingLeft: '0px',
+            wordSpacing: '0px',
+            marginBottom: '0px',
+            mixBlendMode: 'normal',
+            paddingRight: '0px',
+            letterSpacing: '0px',
+            paddingBottom: '0px',
+            textTransform: 'none',
+            backdropFilter: 'none',
+            borderTopWidth: '0',
+            textDecoration: 'none',
+            borderLeftWidth: '0',
+            borderRightWidth: '0',
+            borderBottomWidth: '1px',
+            borderTopLeftRadius: '0',
+            borderTopRightRadius: '0',
+            borderBottomLeftRadius: '0',
+            borderBottomRightRadius: '0',
+          }"
+        />
+        <WTextFormatting
+          text="Phone Number"
+          color="#000000"
+          v-bind:snapX="false"
+          v-bind:snapY="false"
+          v-bind:rotate="0"
+          position="relative"
+          highlight="transparent"
+          background="transparent"
+          v-bind:isClipping="false"
+          animationName=""
+          ncTooltipText=""
+          id="71abcefc-646c-4c8b-8236-f1f57acea357"
+          v-bind:style="{
+            dir: 'ltr',
+            width: '100%',
+            bqCite: '',
+            filter: 'none',
+            height: '100%',
+            zIndex: 41,
+            fontStyle: 'normal',
+            marginTop: '0px',
+            textAlign: 'left',
+            fontFamily: 'Roboto',
+            fontWeight: 300,
+            lineHeight: '1.4',
+            marginLeft: '0px',
+            paddingTop: '0px',
+            textIndent: '0px',
+            visibility: 'visible',
+            whiteSpace: 'pre-wrap',
+            marginRight: '0px',
+            paddingLeft: '0px',
+            wordSpacing: '0px',
+            marginBottom: '0px',
+            mixBlendMode: 'normal',
+            paddingRight: '0px',
+            letterSpacing: '0px',
+            paddingBottom: '0px',
+            textTransform: 'none',
+            backdropFilter: 'none',
+            textDecoration: 'none',
+            textFormatting: 'p',
+          }"
+        />
+        <TextInput
+          ref="phone"
+          v-bind:snapX="false"
+          v-bind:snapY="false"
+          value=""
+          v-bind:rotate="0"
+          opacity="1"
+          ncBgType="bgColor"
+          position="relative"
+          v-bind:readonly="false"
+          inputType="text"
+          v-bind:isEnabled="true"
+          maxLength=""
+          placeholder="0(123) 456-7890"
+          animationName=""
+          ncTooltipText=""
+          ncFocusFontColor="#292929"
+          ncHoverFontColor="#939393"
+          placeholderColor="#C1C1C1FF"
+          ncFocusBorderColor="#292929"
+          ncHoverBorderColor="#5B5B5B66"
+          ncFocusBackgroundColor="transparent"
+          ncHoverBackgroundColor="transparent"
+          id="f86bf4ac-6a77-4894-81e1-bed8476a6839"
+          v-bind:style="{
+            color: '#292929',
+            width: '100%',
+            filter: 'none',
+            height: '100%',
+            zIndex: 42,
+            boxShadow: '',
+            fontStyle: 'normal',
+            marginTop: '0px',
+            textAlign: 'left',
+            background: 'transparent',
+            fontFamily: 'Inter',
+            fontWeight: 300,
+            lineHeight: 'normal',
+            marginLeft: '0px',
+            paddingTop: '0px',
+            textIndent: '0px',
+            visibility: 'visible',
+            borderColor: '#292929',
+            borderStyle: 'solid',
+            marginRight: '0px',
+            paddingLeft: '0px',
+            wordSpacing: '0px',
+            marginBottom: '0px',
+            mixBlendMode: 'normal',
+            paddingRight: '0px',
+            letterSpacing: '0px',
+            paddingBottom: '0px',
+            textTransform: 'none',
+            backdropFilter: 'none',
+            borderTopWidth: '0',
+            textDecoration: 'none',
+            borderLeftWidth: '0',
+            borderRightWidth: '0',
+            borderBottomWidth: '1px',
+            borderTopLeftRadius: '0',
+            borderTopRightRadius: '0',
+            borderBottomLeftRadius: '0',
+            borderBottomRightRadius: '0',
+          }"
+        />
+        <WTextFormatting
+          text="Address‎"
+          color="#000000"
+          v-bind:snapX="false"
+          v-bind:snapY="false"
+          v-bind:rotate="0"
+          position="relative"
+          highlight="transparent"
+          background="transparent"
+          v-bind:isClipping="false"
+          animationName=""
+          ncTooltipText=""
+          id="6bc9e156-cfb2-4d0b-9f88-b862a1e8ace3"
+          v-bind:style="{
+            dir: 'ltr',
+            width: '100%',
+            bqCite: '',
+            filter: 'none',
+            height: '100%',
+            zIndex: 43,
+            fontStyle: 'normal',
+            marginTop: '0px',
+            textAlign: 'left',
+            fontFamily: 'Roboto',
+            fontWeight: 300,
+            lineHeight: '1.4',
+            marginLeft: '0px',
+            paddingTop: '0px',
+            textIndent: '0px',
+            visibility: 'visible',
+            whiteSpace: 'pre-wrap',
+            marginRight: '0px',
+            paddingLeft: '0px',
+            wordSpacing: '0px',
+            marginBottom: '0px',
+            mixBlendMode: 'normal',
+            paddingRight: '0px',
+            letterSpacing: '0px',
+            paddingBottom: '0px',
+            textTransform: 'none',
+            backdropFilter: 'none',
+            textDecoration: 'none',
+            textFormatting: 'p',
+          }"
+        />
+        <TextInput
+          ref="address"
+          v-bind:snapX="false"
+          v-bind:snapY="false"
+          value=""
+          v-bind:rotate="0"
+          opacity="1"
+          ncBgType="bgColor"
+          position="relative"
+          v-bind:readonly="false"
+          inputType="text"
+          v-bind:isEnabled="true"
+          maxLength=""
+          placeholder="123 Main Street"
+          animationName=""
+          ncTooltipText=""
+          ncFocusFontColor="#292929"
+          ncHoverFontColor="#939393"
+          placeholderColor="#C1C1C1FF"
+          ncFocusBorderColor="#292929"
+          ncHoverBorderColor="#5B5B5B66"
+          ncFocusBackgroundColor="transparent"
+          ncHoverBackgroundColor="transparent"
+          id="71d9bf32-f625-46eb-86c5-c4adc2166b6b"
+          v-bind:style="{
+            color: '#292929',
+            width: '100%',
+            filter: 'none',
+            height: '100%',
+            zIndex: 44,
+            boxShadow: '',
+            fontStyle: 'normal',
+            marginTop: '0px',
+            textAlign: 'left',
+            background: 'transparent',
+            fontFamily: 'Inter',
+            fontWeight: 300,
+            lineHeight: 'normal',
+            marginLeft: '0px',
+            paddingTop: '0px',
+            textIndent: '0px',
+            visibility: 'visible',
+            borderColor: '#292929',
+            borderStyle: 'solid',
+            marginRight: '0px',
+            paddingLeft: '0px',
+            wordSpacing: '0px',
+            marginBottom: '0px',
+            mixBlendMode: 'normal',
+            paddingRight: '0px',
+            letterSpacing: '0px',
+            paddingBottom: '0px',
+            textTransform: 'none',
+            backdropFilter: 'none(0%)',
+            borderTopWidth: '0',
+            textDecoration: 'none',
+            borderLeftWidth: '0',
+            borderRightWidth: '0',
+            borderBottomWidth: '1px',
+            borderTopLeftRadius: '0',
+            borderTopRightRadius: '0',
+            borderBottomLeftRadius: '0',
+            borderBottomRightRadius: '0',
+          }"
+        />
+        <WButton
+          tag="button"
+          href=""
+          v-bind:pill="false"
+          size="md"
+          text="SUBMIT"
+          type="button"
+          v-bind:block="false"
+          color="#FFFFFF"
+          v-bind:snapX="false"
+          v-bind:snapY="false"
+          theme="theme--light01"
+          v-bind:rotate="0"
+          v-bind:squared="false"
+          variant="primary"
+          ncBgType="bgColor"
+          position="relative"
+          v-bind:isEnabled="true"
+          background="#151515FF"
+          linkTarget="_top"
+          ncLinkType="router_link"
+          borderColor="#007bff"
+          borderRadius="16px"
+          v-bind:resetTrigger="false"
+          animationName=""
+          ncTooltipText=""
+          verticalWidth="60px"
+          formTransition="none"
+          v-bind:nucalDataModel="{ type: 'NSW', isList: false, dynamic: false, structure: [{ type: 'string', propName: 'text', displayName: 'Value' }] }"
+          verticalHeight="60px"
+          horizontalWidth="72.4479px"
+          nucalScaleWidth=""
+          toForRouterLink=""
+          horizontalHeight="37.5347px"
+          ncClickFontColor="#FFFFFF"
+          ncFocusFontColor="#FFFFFF"
+          ncHoverFontColor="#FFFFFF"
+          nucalScaleHeight=""
+          ncClickBorderColor="#181818FF"
+          ncDisableFontColor="#FFFFFF"
+          ncFocusBorderColor="#181818FF"
+          ncHoverBorderColor="#151515B3"
+          ncDisableBorderColor="transparent"
+          ncClickBackgroundColor="#181818FF"
+          ncFocusBackgroundColor="#181818FF"
+          ncHoverBackgroundColor="linear-gradient(55deg, #1CC9AAFF 0%, #1CBFCDFF 98%)"
+          ncDisableBackgroundColor="#969696"
+          id="108277c7-dbbb-40c6-9698-cf65bb4bed51"
+          v-bind:style="{
+            width: '100%',
+            filter: 'none',
+            height: '100%',
+            zIndex: 45,
+            tabIndex: '0px',
+            boxShadow: '',
+            fontStyle: 'normal',
+            marginTop: '',
+            textAlign: 'center',
+            fontFamily: 'Open Sans',
+            fontWeight: 300,
+            lineHeight: '1.4',
+            marginLeft: '',
+            paddingTop: '',
+            textIndent: '0px',
+            textShadow: '',
+            visibility: 'visible',
+            whiteSpace: 'pre-wrap',
+            borderStyle: 'none',
+            marginRight: '',
+            paddingLeft: '',
+            wordSpacing: '0px',
+            marginBottom: '',
+            mixBlendMode: 'normal',
+            paddingRight: '',
+            letterSpacing: '2px',
+            paddingBottom: '',
+            textTransform: 'none',
+            backdropFilter: 'none',
+            borderTopWidth: '1px',
+            textDecoration: 'none',
+            borderLeftWidth: '1px',
+            borderRightWidth: '1px',
+            horizontalHeight: '37.5347px',
+            borderBottomWidth: '1px',
+            borderTopLeftRadius: '16px',
+            borderTopRightRadius: '16px',
+            borderBottomLeftRadius: '16px',
+            borderBottomRightRadius: '16px',
+          }"
+          @click.native="createRecord"
+        />
+        <Convergence
+          v-bind:snapX="false"
+          v-bind:snapY="false"
+          position="relative"
+          id="9bd84b9d-11ae-48a8-b8ac-355d6ebb3d6f"
+          v-bind:style="{ width: '100%', height: '100%', zIndex: 46 }"
+        >
+          <WTextFormatting
+            text="City"
+            color="#000000"
+            v-bind:snapX="false"
+            v-bind:snapY="false"
+            v-bind:rotate="0"
+            position="relative"
+            highlight="transparent"
+            background="transparent"
+            v-bind:isClipping="false"
+            animationName=""
+            ncTooltipText=""
+            id="264b2522-8024-4c4b-9248-484f87cf4c67"
+            v-bind:style="{
+              dir: 'ltr',
+              width: '100%',
+              bqCite: '',
+              filter: 'none',
+              height: '100%',
+              zIndex: 47,
+              fontStyle: 'normal',
+              marginTop: '0px',
+              textAlign: 'left',
+              fontFamily: 'Roboto',
+              fontWeight: 300,
+              lineHeight: '1.4',
+              marginLeft: '0px',
+              paddingTop: '0px',
+              textIndent: '0px',
+              visibility: 'visible',
+              whiteSpace: 'pre-wrap',
+              marginRight: '0px',
+              paddingLeft: '0px',
+              wordSpacing: '0px',
+              marginBottom: '0px',
+              mixBlendMode: 'normal',
+              paddingRight: '0px',
+              letterSpacing: '0px',
+              paddingBottom: '0px',
+              textTransform: 'none',
+              backdropFilter: 'none',
+              textDecoration: 'none',
+              textFormatting: 'p',
+            }"
+          />
+          <TextInput
+            ref="city"
+            v-bind:snapX="false"
+            v-bind:snapY="false"
+            value=""
+            v-bind:rotate="0"
+            opacity="1"
+            ncBgType="bgColor"
+            position="relative"
+            v-bind:readonly="false"
+            inputType="text"
+            v-bind:isEnabled="true"
+            maxLength=""
+            placeholder="Anytown"
+            animationName=""
+            ncTooltipText=""
+            ncFocusFontColor="#292929"
+            ncHoverFontColor="#939393"
+            placeholderColor="#C1C1C1FF"
+            ncFocusBorderColor="#292929"
+            ncHoverBorderColor="#5B5B5B66"
+            ncFocusBackgroundColor="transparent"
+            ncHoverBackgroundColor="transparent"
+            id="f0f80b98-2479-400f-93a2-a2a7ef6cc817"
+            v-bind:style="{
+              color: '#292929',
+              width: '100%',
+              filter: 'none',
+              height: '100%',
+              zIndex: 48,
+              boxShadow: '',
+              fontStyle: 'normal',
+              marginTop: '0px',
+              textAlign: 'left',
+              background: 'transparent',
+              fontFamily: 'Inter',
+              fontWeight: 300,
+              lineHeight: 'normal',
+              marginLeft: '0px',
+              paddingTop: '0px',
+              textIndent: '0px',
+              visibility: 'visible',
+              borderColor: '#292929',
+              borderStyle: 'solid',
+              marginRight: '0px',
+              paddingLeft: '0px',
+              wordSpacing: '0px',
+              marginBottom: '0px',
+              mixBlendMode: 'normal',
+              paddingRight: '0px',
+              letterSpacing: '0px',
+              paddingBottom: '0px',
+              textTransform: 'none',
+              backdropFilter: 'none(0%)',
+              borderTopWidth: '0',
+              textDecoration: 'none',
+              borderLeftWidth: '0',
+              borderRightWidth: '0',
+              borderBottomWidth: '1px',
+              borderTopLeftRadius: '0',
+              borderTopRightRadius: '0',
+              borderBottomLeftRadius: '0',
+              borderBottomRightRadius: '0',
+            }"
+          />
+          <WTextFormatting
+            text="Country‎"
+            color="#000000"
+            v-bind:snapX="false"
+            v-bind:snapY="false"
+            v-bind:rotate="0"
+            position="relative"
+            highlight="transparent"
+            background="transparent"
+            v-bind:isClipping="false"
+            animationName=""
+            ncTooltipText=""
+            id="6430c4ac-8cca-4b19-97d8-979453f3104a"
+            v-bind:style="{
+              dir: 'ltr',
+              width: '100%',
+              bqCite: '',
+              filter: 'none',
+              height: '100%',
+              zIndex: 49,
+              fontStyle: 'normal',
+              marginTop: '0px',
+              textAlign: 'left',
+              fontFamily: 'Roboto',
+              fontWeight: 300,
+              lineHeight: '1.4',
+              marginLeft: '0px',
+              paddingTop: '0px',
+              textIndent: '0px',
+              visibility: 'visible',
+              whiteSpace: 'pre-wrap',
+              marginRight: '0px',
+              paddingLeft: '0px',
+              wordSpacing: '0px',
+              marginBottom: '0px',
+              mixBlendMode: 'normal',
+              paddingRight: '0px',
+              letterSpacing: '0px',
+              paddingBottom: '0px',
+              textTransform: 'none',
+              backdropFilter: 'none',
+              textDecoration: 'none',
+              textFormatting: 'p',
+            }"
+          />
+          <TextInput
+            ref="country"
+            v-bind:snapX="false"
+            v-bind:snapY="false"
+            value=""
+            v-bind:rotate="0"
+            opacity="1"
+            ncBgType="bgColor"
+            position="relative"
+            v-bind:readonly="false"
+            inputType="text"
+            v-bind:isEnabled="true"
+            maxLength=""
+            placeholder="United States"
+            animationName=""
+            ncTooltipText=""
+            ncFocusFontColor="#292929"
+            ncHoverFontColor="#939393"
+            placeholderColor="#C1C1C1FF"
+            ncFocusBorderColor="#292929"
+            ncHoverBorderColor="#5B5B5B66"
+            ncFocusBackgroundColor="transparent"
+            ncHoverBackgroundColor="transparent"
+            id="c79e261d-f6ac-4354-b05c-53e9003e6739"
+            v-bind:style="{
+              color: '#292929',
+              width: '100%',
+              filter: 'none',
+              height: '100%',
+              zIndex: 50,
+              boxShadow: '',
+              fontStyle: 'normal',
+              marginTop: '0px',
+              textAlign: 'left',
+              background: 'transparent',
+              fontFamily: 'Inter',
+              fontWeight: 300,
+              lineHeight: 'normal',
+              marginLeft: '0px',
+              paddingTop: '0px',
+              textIndent: '0px',
+              visibility: 'visible',
+              borderColor: '#292929',
+              borderStyle: 'solid',
+              marginRight: '0px',
+              paddingLeft: '0px',
+              wordSpacing: '0px',
+              marginBottom: '0px',
+              mixBlendMode: 'normal',
+              paddingRight: '0px',
+              letterSpacing: '0px',
+              paddingBottom: '0px',
+              textTransform: 'none',
+              backdropFilter: 'none(0%)',
+              borderTopWidth: '0',
+              textDecoration: 'none',
+              borderLeftWidth: '0',
+              borderRightWidth: '0',
+              borderBottomWidth: '1px',
+              borderTopLeftRadius: '0',
+              borderTopRightRadius: '0',
+              borderBottomLeftRadius: '0',
+              borderBottomRightRadius: '0',
+            }"
+          />
+        </Convergence>
+        <WTextFormatting
+          text="Share your address for easy purchasing!‎"
+          color="#000000FF"
+          v-bind:snapX="false"
+          v-bind:snapY="false"
+          v-bind:rotate="0"
+          position="relative"
+          highlight="transparent"
+          background="transparent"
+          v-bind:isClipping="false"
+          ncTypography="custom"
+          animationName=""
+          ncTooltipText=""
+          id="7496d503-b8b2-4e8e-9dfe-c5b42edee3e9"
           v-bind:style="{
             dir: 'ltr',
             width: '100%',
@@ -672,74 +898,120 @@
             textFormatting: 'p',
           }"
         />
-        <TextInput
-          ref="city"
+        <Convergence
           v-bind:snapX="false"
           v-bind:snapY="false"
-          value=""
-          v-bind:rotate="0"
-          opacity="1"
-          ncBgType="bgColor"
           position="relative"
-          v-bind:readonly="false"
-          inputType="text"
-          v-bind:isEnabled="true"
-          maxLength=""
-          placeholder="Anytown"
-          animationName=""
-          ncTooltipText=""
-          ncFocusFontColor="#292929"
-          ncHoverFontColor="#939393"
-          placeholderColor="#C1C1C1FF"
-          ncFocusBorderColor="#292929"
-          ncHoverBorderColor="#5B5B5B66"
-          ncFocusBackgroundColor="transparent"
-          ncHoverBackgroundColor="transparent"
-          id="f0f80b98-2479-400f-93a2-a2a7ef6cc817"
-          v-bind:style="{
-            color: '#292929',
-            width: '100%',
-            filter: 'none',
-            height: '100%',
-            zIndex: 48,
-            boxShadow: '',
-            fontStyle: 'normal',
-            marginTop: '0px',
-            textAlign: 'left',
-            background: 'transparent',
-            fontFamily: 'Inter',
-            fontWeight: 300,
-            lineHeight: 'normal',
-            marginLeft: '0px',
-            paddingTop: '0px',
-            textIndent: '0px',
-            visibility: 'visible',
-            borderColor: '#292929',
-            borderStyle: 'solid',
-            marginRight: '0px',
-            paddingLeft: '0px',
-            wordSpacing: '0px',
-            marginBottom: '0px',
-            mixBlendMode: 'normal',
-            paddingRight: '0px',
-            letterSpacing: '0px',
-            paddingBottom: '0px',
-            textTransform: 'none',
-            backdropFilter: 'none(0%)',
-            borderTopWidth: '0',
-            textDecoration: 'none',
-            borderLeftWidth: '0',
-            borderRightWidth: '0',
-            borderBottomWidth: '1px',
-            borderTopLeftRadius: '0',
-            borderTopRightRadius: '0',
-            borderBottomLeftRadius: '0',
-            borderBottomRightRadius: '0',
-          }"
-        />
+          id="68366a6e-cb8c-46b8-b851-0a47344f002b"
+          v-bind:style="{ width: '100%', height: '100%', zIndex: 48 }"
+        >
+          <WTextFormatting
+            text="Address"
+            color="#000000"
+            v-bind:snapX="false"
+            v-bind:snapY="false"
+            v-bind:rotate="0"
+            position="relative"
+            highlight="transparent"
+            background="transparent"
+            v-bind:isClipping="false"
+            ncTypography="custom"
+            animationName=""
+            ncTooltipText=""
+            id="3534aaaf-1607-42b0-9c41-9fead4d6d9ee"
+            v-bind:style="{
+              dir: 'ltr',
+              width: '100%',
+              bqCite: '',
+              filter: 'none',
+              height: '100%',
+              zIndex: 49,
+              fontStyle: 'normal',
+              marginTop: '0px',
+              textAlign: 'left',
+              fontFamily: 'Roboto',
+              fontWeight: 500,
+              lineHeight: '1.4',
+              marginLeft: '0px',
+              paddingTop: '0px',
+              textIndent: '0px',
+              visibility: 'visible',
+              whiteSpace: 'pre-wrap',
+              marginRight: '0px',
+              paddingLeft: '0px',
+              wordSpacing: '0px',
+              marginBottom: '0px',
+              mixBlendMode: 'normal',
+              paddingRight: '0px',
+              letterSpacing: '0px',
+              paddingBottom: '0px',
+              textTransform: 'none',
+              backdropFilter: 'none',
+              textDecoration: 'none',
+              textFormatting: 'p',
+            }"
+          />
+          <WImage
+            v-bind:blank="false"
+            v-bind:snapX="false"
+            v-bind:snapY="false"
+            v-bind:rotate="0"
+            v-bind:rounded="false"
+            clipPath=""
+            imageUrl="https://file.dev.nucal.com/5d3dc32d998c020bb22a126f171a370407da5c8e/public/093f8a3a-fe0b-4256-ac9b-35177e0b61cc"
+            position="relative"
+            objectFit="fill"
+            v-bind:thumbnail="false"
+            blankColor="#000000"
+            defaultUrl="https://file.dev.nucal.com/2f9057712f3200f5cfc575e29a426aca6b807c36/public/fc6df702-6ee1-41cf-b45f-09d0431769e8"
+            v-bind:disability="false"
+            dataLoading="static"
+            animationName=""
+            ncTooltipText="Please write a text to display in tooltip..."
+            v-bind:nucalDataModel="{
+              type: 'NSW',
+              isList: false,
+              dynamic: true,
+              structure: [{ type: 'string', update: { type: 'dataModelForDynamicType' }, propName: 'imageUrl', displayName: 'Value' }],
+            }"
+            ncHoverBorderColor="#000000"
+            ncTappedBorderColor="#000000"
+            dataModelForDynamicType="string"
+            id="d808acc3-3100-4840-b2a1-0abe59067c15"
+            v-bind:style="{
+              width: '100%',
+              filter: 'none',
+              height: '100%',
+              zIndex: 50,
+              boxShadow: '',
+              marginTop: '0px',
+              marginLeft: '0px',
+              paddingTop: '0px',
+              textShadow: '',
+              visibility: 'visible',
+              borderColor: '#4B74FF',
+              borderStyle: 'solid',
+              marginRight: '0px',
+              paddingLeft: '0px',
+              marginBottom: '0px',
+              mixBlendMode: 'normal',
+              paddingRight: '0px',
+              paddingBottom: '0px',
+              backdropFilter: 'none',
+              borderTopWidth: '0px',
+              borderLeftWidth: '0px',
+              borderRightWidth: '0px',
+              borderBottomWidth: '0px',
+              borderTopLeftRadius: '0px',
+              borderTopRightRadius: '0px',
+              borderBottomLeftRadius: '0px',
+              borderBottomRightRadius: '0px',
+            }"
+          />
+        </Convergence>
         <WTextFormatting
-          text="Country‎"
-          color="#000000"
+          text="Provide your contact details so we can stay in touch!‎"
+          color="#000000FF"
           v-bind:snapX="false"
           v-bind:snapY="false"
           v-bind:rotate="0"
@@ -747,9 +1019,10 @@
           highlight="transparent"
           background="transparent"
           v-bind:isClipping="false"
+          ncTypography="custom"
           animationName=""
           ncTooltipText=""
-          id="6430c4ac-8cca-4b19-97d8-979453f3104a"
+          id="1ebbbab0-cf9e-43bf-8a1e-eae5e78dae9e"
           v-bind:style="{
             dir: 'ltr',
             width: '100%',
@@ -782,795 +1055,527 @@
             textFormatting: 'p',
           }"
         />
-        <TextInput
-          ref="country"
+        <Convergence
           v-bind:snapX="false"
           v-bind:snapY="false"
-          value=""
-          v-bind:rotate="0"
-          opacity="1"
-          ncBgType="bgColor"
           position="relative"
-          v-bind:readonly="false"
-          inputType="text"
-          v-bind:isEnabled="true"
-          maxLength=""
-          placeholder="United States"
-          animationName=""
-          ncTooltipText=""
-          ncFocusFontColor="#292929"
-          ncHoverFontColor="#939393"
-          placeholderColor="#C1C1C1FF"
-          ncFocusBorderColor="#292929"
-          ncHoverBorderColor="#5B5B5B66"
-          ncFocusBackgroundColor="transparent"
-          ncHoverBackgroundColor="transparent"
-          id="c79e261d-f6ac-4354-b05c-53e9003e6739"
-          v-bind:style="{
-            color: '#292929',
-            width: '100%',
-            filter: 'none',
-            height: '100%',
-            zIndex: 50,
-            boxShadow: '',
-            fontStyle: 'normal',
-            marginTop: '0px',
-            textAlign: 'left',
-            background: 'transparent',
-            fontFamily: 'Inter',
-            fontWeight: 300,
-            lineHeight: 'normal',
-            marginLeft: '0px',
-            paddingTop: '0px',
-            textIndent: '0px',
-            visibility: 'visible',
-            borderColor: '#292929',
-            borderStyle: 'solid',
-            marginRight: '0px',
-            paddingLeft: '0px',
-            wordSpacing: '0px',
-            marginBottom: '0px',
-            mixBlendMode: 'normal',
-            paddingRight: '0px',
-            letterSpacing: '0px',
-            paddingBottom: '0px',
-            textTransform: 'none',
-            backdropFilter: 'none(0%)',
-            borderTopWidth: '0',
-            textDecoration: 'none',
-            borderLeftWidth: '0',
-            borderRightWidth: '0',
-            borderBottomWidth: '1px',
-            borderTopLeftRadius: '0',
-            borderTopRightRadius: '0',
-            borderBottomLeftRadius: '0',
-            borderBottomRightRadius: '0',
-          }"
-        />
-      </Convergence>
-      <WTextFormatting
-        text="Share your address for easy purchasing!‎"
-        color="#000000FF"
+          id="78c9954b-88b9-44a3-8616-f970e6b7dcca"
+          v-bind:style="{ width: '100%', height: '100%', zIndex: 50 }"
+        >
+          <WTextFormatting
+            text="Contact Information"
+            color="#000000"
+            v-bind:snapX="false"
+            v-bind:snapY="false"
+            v-bind:rotate="0"
+            position="relative"
+            highlight="transparent"
+            background="transparent"
+            v-bind:isClipping="false"
+            ncTypography="custom"
+            animationName=""
+            ncTooltipText=""
+            id="816d5d53-12f2-4038-aaac-d908e8c7b301"
+            v-bind:style="{
+              dir: 'ltr',
+              width: '100%',
+              bqCite: '',
+              filter: 'none',
+              height: '100%',
+              zIndex: 51,
+              fontStyle: 'normal',
+              marginTop: '0px',
+              textAlign: 'left',
+              fontFamily: 'Roboto',
+              fontWeight: 500,
+              lineHeight: '1.4',
+              marginLeft: '0px',
+              paddingTop: '0px',
+              textIndent: '0px',
+              visibility: 'visible',
+              whiteSpace: 'pre-wrap',
+              marginRight: '0px',
+              paddingLeft: '0px',
+              wordSpacing: '0px',
+              marginBottom: '0px',
+              mixBlendMode: 'normal',
+              paddingRight: '0px',
+              letterSpacing: '0px',
+              paddingBottom: '0px',
+              textTransform: 'none',
+              backdropFilter: 'none',
+              textDecoration: 'none',
+              textFormatting: 'p',
+            }"
+          />
+          <WImage
+            v-bind:blank="false"
+            v-bind:snapX="false"
+            v-bind:snapY="false"
+            v-bind:rotate="0"
+            v-bind:rounded="false"
+            clipPath=""
+            imageUrl="https://file.dev.nucal.com/5d3dc32d998c020bb22a126f171a370407da5c8e/public/5ae605c5-1140-400a-b96b-816121df04df"
+            position="relative"
+            objectFit="fill"
+            v-bind:thumbnail="false"
+            blankColor="#000000"
+            defaultUrl="https://file.dev.nucal.com/2f9057712f3200f5cfc575e29a426aca6b807c36/public/fc6df702-6ee1-41cf-b45f-09d0431769e8"
+            v-bind:disability="false"
+            dataLoading="static"
+            animationName=""
+            ncTooltipText="Please write a text to display in tooltip..."
+            v-bind:nucalDataModel="{
+              type: 'NSW',
+              isList: false,
+              dynamic: true,
+              structure: [{ type: 'string', update: { type: 'dataModelForDynamicType' }, propName: 'imageUrl', displayName: 'Value' }],
+            }"
+            ncHoverBorderColor="#000000"
+            ncTappedBorderColor="#000000"
+            dataModelForDynamicType="string"
+            id="eac6f5c7-1d34-496b-b3c4-170b66a7b81d"
+            v-bind:style="{
+              width: '100%',
+              filter: 'none',
+              height: '100%',
+              zIndex: 52,
+              boxShadow: '',
+              marginTop: '0px',
+              marginLeft: '0px',
+              paddingTop: '0px',
+              textShadow: '',
+              visibility: 'visible',
+              borderColor: '#4B74FF',
+              borderStyle: 'solid',
+              marginRight: '0px',
+              paddingLeft: '0px',
+              marginBottom: '0px',
+              mixBlendMode: 'normal',
+              paddingRight: '0px',
+              paddingBottom: '0px',
+              backdropFilter: 'none',
+              borderTopWidth: '0px',
+              borderLeftWidth: '0px',
+              borderRightWidth: '0px',
+              borderBottomWidth: '0px',
+              borderTopLeftRadius: '0px',
+              borderTopRightRadius: '0px',
+              borderBottomLeftRadius: '0px',
+              borderBottomRightRadius: '0px',
+            }"
+          />
+        </Convergence>
+      </SectionContainer>
+      <SectionContainer
         v-bind:snapX="false"
         v-bind:snapY="false"
-        v-bind:rotate="0"
+        v-bind:isLock="false"
+        ncBgType="bgColor"
         position="relative"
-        highlight="transparent"
-        background="transparent"
-        v-bind:isClipping="false"
-        ncTypography="custom"
-        animationName=""
+        background="#FFFFFFFF"
         ncTooltipText=""
-        id="7496d503-b8b2-4e8e-9dfe-c5b42edee3e9"
-        v-bind:style="{
-          dir: 'ltr',
-          width: '100%',
-          bqCite: '',
-          filter: 'none',
-          height: '100%',
-          zIndex: 47,
-          fontStyle: 'normal',
-          marginTop: '0px',
-          textAlign: 'left',
-          fontFamily: 'Roboto',
-          fontWeight: 300,
-          lineHeight: '1.4',
-          marginLeft: '0px',
-          paddingTop: '0px',
-          textIndent: '0px',
-          visibility: 'visible',
-          whiteSpace: 'pre-wrap',
-          marginRight: '0px',
-          paddingLeft: '0px',
-          wordSpacing: '0px',
-          marginBottom: '0px',
-          mixBlendMode: 'normal',
-          paddingRight: '0px',
-          letterSpacing: '0px',
-          paddingBottom: '0px',
-          textTransform: 'none',
-          backdropFilter: 'none',
-          textDecoration: 'none',
-          textFormatting: 'p',
-        }"
-      />
-      <Convergence
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        position="relative"
-        id="68366a6e-cb8c-46b8-b851-0a47344f002b"
-        v-bind:style="{ width: '100%', height: '100%', zIndex: 48 }"
-      >
-        <WTextFormatting
-          text="Address"
-          color="#000000"
-          v-bind:snapX="false"
-          v-bind:snapY="false"
-          v-bind:rotate="0"
-          position="relative"
-          highlight="transparent"
-          background="transparent"
-          v-bind:isClipping="false"
-          ncTypography="custom"
-          animationName=""
-          ncTooltipText=""
-          id="3534aaaf-1607-42b0-9c41-9fead4d6d9ee"
-          v-bind:style="{
-            dir: 'ltr',
-            width: '100%',
-            bqCite: '',
-            filter: 'none',
-            height: '100%',
-            zIndex: 49,
-            fontStyle: 'normal',
-            marginTop: '0px',
-            textAlign: 'left',
-            fontFamily: 'Roboto',
-            fontWeight: 500,
-            lineHeight: '1.4',
-            marginLeft: '0px',
-            paddingTop: '0px',
-            textIndent: '0px',
-            visibility: 'visible',
-            whiteSpace: 'pre-wrap',
-            marginRight: '0px',
-            paddingLeft: '0px',
-            wordSpacing: '0px',
-            marginBottom: '0px',
-            mixBlendMode: 'normal',
-            paddingRight: '0px',
-            letterSpacing: '0px',
-            paddingBottom: '0px',
-            textTransform: 'none',
-            backdropFilter: 'none',
-            textDecoration: 'none',
-            textFormatting: 'p',
-          }"
-        />
-        <WImage
-          v-bind:blank="false"
-          v-bind:snapX="false"
-          v-bind:snapY="false"
-          v-bind:rotate="0"
-          v-bind:rounded="false"
-          clipPath=""
-          imageUrl="https://file.dev.nucal.com/5d3dc32d998c020bb22a126f171a370407da5c8e/public/093f8a3a-fe0b-4256-ac9b-35177e0b61cc"
-          position="relative"
-          objectFit="fill"
-          v-bind:thumbnail="false"
-          blankColor="#000000"
-          defaultUrl="https://file.dev.nucal.com/2f9057712f3200f5cfc575e29a426aca6b807c36/public/fc6df702-6ee1-41cf-b45f-09d0431769e8"
-          v-bind:disability="false"
-          dataLoading="static"
-          animationName=""
-          ncTooltipText="Please write a text to display in tooltip..."
-          v-bind:nucalDataModel="{
-            type: 'NSW',
-            isList: false,
-            dynamic: true,
-            structure: [{ type: 'string', update: { type: 'dataModelForDynamicType' }, propName: 'imageUrl', displayName: 'Value' }],
-          }"
-          ncHoverBorderColor="#000000"
-          ncTappedBorderColor="#000000"
-          dataModelForDynamicType="string"
-          id="d808acc3-3100-4840-b2a1-0abe59067c15"
-          v-bind:style="{
-            width: '100%',
-            filter: 'none',
-            height: '100%',
-            zIndex: 50,
-            boxShadow: '',
-            marginTop: '0px',
-            marginLeft: '0px',
-            paddingTop: '0px',
-            textShadow: '',
-            visibility: 'visible',
-            borderColor: '#4B74FF',
-            borderStyle: 'solid',
-            marginRight: '0px',
-            paddingLeft: '0px',
-            marginBottom: '0px',
-            mixBlendMode: 'normal',
-            paddingRight: '0px',
-            paddingBottom: '0px',
-            backdropFilter: 'none',
-            borderTopWidth: '0px',
-            borderLeftWidth: '0px',
-            borderRightWidth: '0px',
-            borderBottomWidth: '0px',
-            borderTopLeftRadius: '0px',
-            borderTopRightRadius: '0px',
-            borderBottomLeftRadius: '0px',
-            borderBottomRightRadius: '0px',
-          }"
-        />
-      </Convergence>
-      <WTextFormatting
-        text="Provide your contact details so we can stay in touch!‎"
-        color="#000000FF"
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        v-bind:rotate="0"
-        position="relative"
-        highlight="transparent"
-        background="transparent"
-        v-bind:isClipping="false"
-        ncTypography="custom"
-        animationName=""
-        ncTooltipText=""
-        id="1ebbbab0-cf9e-43bf-8a1e-eae5e78dae9e"
-        v-bind:style="{
-          dir: 'ltr',
-          width: '100%',
-          bqCite: '',
-          filter: 'none',
-          height: '100%',
-          zIndex: 49,
-          fontStyle: 'normal',
-          marginTop: '0px',
-          textAlign: 'left',
-          fontFamily: 'Roboto',
-          fontWeight: 300,
-          lineHeight: '1.4',
-          marginLeft: '0px',
-          paddingTop: '0px',
-          textIndent: '0px',
-          visibility: 'visible',
-          whiteSpace: 'pre-wrap',
-          marginRight: '0px',
-          paddingLeft: '0px',
-          wordSpacing: '0px',
-          marginBottom: '0px',
-          mixBlendMode: 'normal',
-          paddingRight: '0px',
-          letterSpacing: '0px',
-          paddingBottom: '0px',
-          textTransform: 'none',
-          backdropFilter: 'none',
-          textDecoration: 'none',
-          textFormatting: 'p',
-        }"
-      />
-      <Convergence
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        position="relative"
-        id="78c9954b-88b9-44a3-8616-f970e6b7dcca"
-        v-bind:style="{ width: '100%', height: '100%', zIndex: 50 }"
-      >
-        <WTextFormatting
-          text="Contact Information"
-          color="#000000"
-          v-bind:snapX="false"
-          v-bind:snapY="false"
-          v-bind:rotate="0"
-          position="relative"
-          highlight="transparent"
-          background="transparent"
-          v-bind:isClipping="false"
-          ncTypography="custom"
-          animationName=""
-          ncTooltipText=""
-          id="816d5d53-12f2-4038-aaac-d908e8c7b301"
-          v-bind:style="{
-            dir: 'ltr',
-            width: '100%',
-            bqCite: '',
-            filter: 'none',
-            height: '100%',
-            zIndex: 51,
-            fontStyle: 'normal',
-            marginTop: '0px',
-            textAlign: 'left',
-            fontFamily: 'Roboto',
-            fontWeight: 500,
-            lineHeight: '1.4',
-            marginLeft: '0px',
-            paddingTop: '0px',
-            textIndent: '0px',
-            visibility: 'visible',
-            whiteSpace: 'pre-wrap',
-            marginRight: '0px',
-            paddingLeft: '0px',
-            wordSpacing: '0px',
-            marginBottom: '0px',
-            mixBlendMode: 'normal',
-            paddingRight: '0px',
-            letterSpacing: '0px',
-            paddingBottom: '0px',
-            textTransform: 'none',
-            backdropFilter: 'none',
-            textDecoration: 'none',
-            textFormatting: 'p',
-          }"
-        />
-        <WImage
-          v-bind:blank="false"
-          v-bind:snapX="false"
-          v-bind:snapY="false"
-          v-bind:rotate="0"
-          v-bind:rounded="false"
-          clipPath=""
-          imageUrl="https://file.dev.nucal.com/5d3dc32d998c020bb22a126f171a370407da5c8e/public/5ae605c5-1140-400a-b96b-816121df04df"
-          position="relative"
-          objectFit="fill"
-          v-bind:thumbnail="false"
-          blankColor="#000000"
-          defaultUrl="https://file.dev.nucal.com/2f9057712f3200f5cfc575e29a426aca6b807c36/public/fc6df702-6ee1-41cf-b45f-09d0431769e8"
-          v-bind:disability="false"
-          dataLoading="static"
-          animationName=""
-          ncTooltipText="Please write a text to display in tooltip..."
-          v-bind:nucalDataModel="{
-            type: 'NSW',
-            isList: false,
-            dynamic: true,
-            structure: [{ type: 'string', update: { type: 'dataModelForDynamicType' }, propName: 'imageUrl', displayName: 'Value' }],
-          }"
-          ncHoverBorderColor="#000000"
-          ncTappedBorderColor="#000000"
-          dataModelForDynamicType="string"
-          id="eac6f5c7-1d34-496b-b3c4-170b66a7b81d"
-          v-bind:style="{
-            width: '100%',
-            filter: 'none',
-            height: '100%',
-            zIndex: 52,
-            boxShadow: '',
-            marginTop: '0px',
-            marginLeft: '0px',
-            paddingTop: '0px',
-            textShadow: '',
-            visibility: 'visible',
-            borderColor: '#4B74FF',
-            borderStyle: 'solid',
-            marginRight: '0px',
-            paddingLeft: '0px',
-            marginBottom: '0px',
-            mixBlendMode: 'normal',
-            paddingRight: '0px',
-            paddingBottom: '0px',
-            backdropFilter: 'none',
-            borderTopWidth: '0px',
-            borderLeftWidth: '0px',
-            borderRightWidth: '0px',
-            borderBottomWidth: '0px',
-            borderTopLeftRadius: '0px',
-            borderTopRightRadius: '0px',
-            borderBottomLeftRadius: '0px',
-            borderBottomRightRadius: '0px',
-          }"
-        />
-      </Convergence>
-    </SectionContainer>
-    <SectionContainer
-      v-bind:snapX="false"
-      v-bind:snapY="false"
-      v-bind:isLock="false"
-      ncBgType="bgColor"
-      position="relative"
-      background="#FFFFFFFF"
-      ncTooltipText=""
-      backgroundImage=""
-      id="e37d83c2-e2d8-44af-8d7c-48cc22483095"
-      v-bind:style="{
-        width: '100%',
-        height: '100%',
-        zIndex: 35,
-        tabIndex: '-1',
-        boxShadow: '',
-        marginTop: '0px',
-        marginLeft: '0px',
-        paddingTop: '',
-        visibility: 'visible',
-        borderColor: '#21CA21',
-        borderStyle: 'none',
-        marginRight: '0px',
-        paddingLeft: '',
-        marginBottom: '0px',
-        paddingRight: '',
-        paddingBottom: '',
-        borderTopWidth: '1px',
-        textDecoration: 'none',
-        borderLeftWidth: '1px',
-        borderRightWidth: '1px',
-        borderBottomWidth: '1px',
-        borderTopLeftRadius: '0px',
-        borderTopRightRadius: '0px',
-        borderBottomLeftRadius: '0px',
-        borderBottomRightRadius: '0px',
-      }"
-    >
-      <WTextFormatting
-        text="About Us‎"
-        color="#000000"
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        v-bind:rotate="0"
-        position="relative"
-        highlight="transparent"
-        background="transparent"
-        v-bind:isClipping="false"
-        ncTypography="custom"
-        animationName=""
-        ncTooltipText=""
-        id="d2742c8a-57a0-480c-b5d6-be3224d987ee"
-        v-bind:style="{
-          dir: 'ltr',
-          width: '100%',
-          bqCite: '',
-          filter: 'none',
-          height: '100%',
-          zIndex: 37,
-          fontStyle: 'normal',
-          marginTop: '0px',
-          textAlign: 'left',
-          fontFamily: 'Roboto',
-          fontWeight: 500,
-          lineHeight: '1.4',
-          marginLeft: '0px',
-          paddingTop: '0px',
-          textIndent: '0px',
-          visibility: 'visible',
-          whiteSpace: 'pre-wrap',
-          marginRight: '0px',
-          paddingLeft: '0px',
-          wordSpacing: '0px',
-          marginBottom: '0px',
-          mixBlendMode: 'normal',
-          paddingRight: '0px',
-          letterSpacing: '0px',
-          paddingBottom: '0px',
-          textTransform: 'none',
-          backdropFilter: 'none',
-          textDecoration: 'none',
-          textFormatting: 'p',
-        }"
-      />
-      <WTextFormatting
-        text="Welcome to our company, where innovation meets passion. Founded with a vision to redefine industry standards, we are dedicated to delivering excellence in every aspect of our business.
-
-At our company, we believe in the power of collaboration, creativity, and commitment. Our team is comprised of talented individuals who are driven by a shared goal: to provide our customers with exceptional products and services that exceed expectations.‎"
-        color="#000000"
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        v-bind:rotate="0"
-        position="relative"
-        highlight="transparent"
-        background="transparent"
-        v-bind:isClipping="false"
-        ncTypography="custom"
-        animationName=""
-        ncTooltipText=""
-        id="7d31b56f-cf25-495f-b3ab-2840b4ac468b"
-        v-bind:style="{
-          dir: 'ltr',
-          width: '100%',
-          bqCite: '',
-          filter: 'none',
-          height: '100%',
-          zIndex: 38,
-          fontStyle: 'normal',
-          marginTop: '0px',
-          textAlign: 'left',
-          fontFamily: 'Roboto',
-          fontWeight: 300,
-          lineHeight: '1.4',
-          marginLeft: '0px',
-          paddingTop: '0px',
-          textIndent: '0px',
-          visibility: 'visible',
-          whiteSpace: 'pre-wrap',
-          marginRight: '0px',
-          paddingLeft: '0px',
-          wordSpacing: '0px',
-          marginBottom: '0px',
-          mixBlendMode: 'normal',
-          paddingRight: '0px',
-          letterSpacing: '0px',
-          paddingBottom: '0px',
-          textTransform: 'none',
-          backdropFilter: 'none',
-          textDecoration: 'none',
-          textFormatting: 'p',
-        }"
-      />
-      <WImage
-        v-bind:blank="false"
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        v-bind:rotate="0"
-        v-bind:rounded="false"
-        clipPath=""
-        imageUrl="https://file.dev.nucal.com/5d3dc32d998c020bb22a126f171a370407da5c8e/public/2f861073-8c72-4621-9a9b-9be8487ef91d"
-        position="relative"
-        objectFit="fill"
-        v-bind:thumbnail="false"
-        blankColor="#000000"
-        defaultUrl="https://file.dev.nucal.com/2f9057712f3200f5cfc575e29a426aca6b807c36/public/fc6df702-6ee1-41cf-b45f-09d0431769e8"
-        v-bind:disability="false"
-        dataLoading="static"
-        animationName=""
-        ncTooltipText="Please write a text to display in tooltip..."
-        v-bind:nucalDataModel="{
-          type: 'NSW',
-          isList: false,
-          dynamic: true,
-          structure: [{ type: 'string', update: { type: 'dataModelForDynamicType' }, propName: 'imageUrl', displayName: 'Value' }],
-        }"
-        ncHoverBorderColor="#000000"
-        ncTappedBorderColor="#000000"
-        dataModelForDynamicType="string"
-        id="24035518-9030-4d94-90da-719e12a71359"
+        backgroundImage=""
+        id="e37d83c2-e2d8-44af-8d7c-48cc22483095"
         v-bind:style="{
           width: '100%',
-          filter: 'none',
           height: '100%',
-          zIndex: 39,
+          zIndex: 35,
+          tabIndex: '-1',
           boxShadow: '',
           marginTop: '0px',
           marginLeft: '0px',
-          paddingTop: '0px',
-          textShadow: '',
+          paddingTop: '',
           visibility: 'visible',
-          borderColor: '#4B74FF',
-          borderStyle: 'solid',
+          borderColor: '#21CA21',
+          borderStyle: 'none',
           marginRight: '0px',
-          paddingLeft: '0px',
+          paddingLeft: '',
           marginBottom: '0px',
-          mixBlendMode: 'normal',
-          paddingRight: '0px',
-          paddingBottom: '0px',
-          backdropFilter: 'none',
-          borderTopWidth: '0px',
-          borderLeftWidth: '0px',
-          borderRightWidth: '0px',
-          borderBottomWidth: '0px',
+          paddingRight: '',
+          paddingBottom: '',
+          borderTopWidth: '1px',
+          textDecoration: 'none',
+          borderLeftWidth: '1px',
+          borderRightWidth: '1px',
+          borderBottomWidth: '1px',
           borderTopLeftRadius: '0px',
           borderTopRightRadius: '0px',
           borderBottomLeftRadius: '0px',
           borderBottomRightRadius: '0px',
         }"
-      />
-    </SectionContainer>
-    <SectionContainer
-      v-bind:isLock="false"
-      position="relative"
-      background="linear-gradient(345deg, #152362FF 1%, #000000FF 51%, #363636FF 100%)"
-      ncTooltipText=""
-      id="ba0ff475-430c-40ef-a128-ec8c53e8ab52"
-      v-bind:style="{
-        width: '100%',
-        height: '100%',
-        zIndex: 36,
-        tabIndex: '-1',
-        boxShadow: '',
-        marginTop: '0px',
-        marginLeft: '0px',
-        paddingTop: '',
-        visibility: 'visible',
-        borderColor: '#21CA21',
-        borderStyle: 'none',
-        marginRight: '0px',
-        paddingLeft: '',
-        marginBottom: '0px',
-        paddingRight: '',
-        paddingBottom: '',
-        borderTopWidth: '1px',
-        textDecoration: 'none',
-        borderLeftWidth: '1px',
-        borderRightWidth: '1px',
-        borderBottomWidth: '1px',
-        borderTopLeftRadius: '0px',
-        borderTopRightRadius: '0px',
-        borderBottomLeftRadius: '0px',
-        borderBottomRightRadius: '0px',
-      }"
-    >
-      <WButton
-        tag="button"
-        href="https://developers.nucal.com/parject"
-        v-bind:pill="false"
-        size="md"
-        text="Explore our products"
-        type="button"
-        v-bind:block="false"
-        color="#FFFFFF"
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        theme="theme--light01"
-        v-bind:rotate="0"
-        v-bind:squared="false"
-        variant="primary"
-        ncBgType="bgColor"
+      >
+        <WTextFormatting
+          text="About Us‎"
+          color="#000000"
+          v-bind:snapX="false"
+          v-bind:snapY="false"
+          v-bind:rotate="0"
+          position="relative"
+          highlight="transparent"
+          background="transparent"
+          v-bind:isClipping="false"
+          ncTypography="custom"
+          animationName=""
+          ncTooltipText=""
+          id="d2742c8a-57a0-480c-b5d6-be3224d987ee"
+          v-bind:style="{
+            dir: 'ltr',
+            width: '100%',
+            bqCite: '',
+            filter: 'none',
+            height: '100%',
+            zIndex: 37,
+            fontStyle: 'normal',
+            marginTop: '0px',
+            textAlign: 'left',
+            fontFamily: 'Roboto',
+            fontWeight: 500,
+            lineHeight: '1.4',
+            marginLeft: '0px',
+            paddingTop: '0px',
+            textIndent: '0px',
+            visibility: 'visible',
+            whiteSpace: 'pre-wrap',
+            marginRight: '0px',
+            paddingLeft: '0px',
+            wordSpacing: '0px',
+            marginBottom: '0px',
+            mixBlendMode: 'normal',
+            paddingRight: '0px',
+            letterSpacing: '0px',
+            paddingBottom: '0px',
+            textTransform: 'none',
+            backdropFilter: 'none',
+            textDecoration: 'none',
+            textFormatting: 'p',
+          }"
+        />
+        <WTextFormatting
+          text="Welcome to our company, where innovation meets passion. Founded with a vision to redefine industry standards, we are dedicated to delivering excellence in every aspect of our business.
+
+At our company, we believe in the power of collaboration, creativity, and commitment. Our team is comprised of talented individuals who are driven by a shared goal: to provide our customers with exceptional products and services that exceed expectations.‎"
+          color="#000000"
+          v-bind:snapX="false"
+          v-bind:snapY="false"
+          v-bind:rotate="0"
+          position="relative"
+          highlight="transparent"
+          background="transparent"
+          v-bind:isClipping="false"
+          ncTypography="custom"
+          animationName=""
+          ncTooltipText=""
+          id="7d31b56f-cf25-495f-b3ab-2840b4ac468b"
+          v-bind:style="{
+            dir: 'ltr',
+            width: '100%',
+            bqCite: '',
+            filter: 'none',
+            height: '100%',
+            zIndex: 38,
+            fontStyle: 'normal',
+            marginTop: '0px',
+            textAlign: 'left',
+            fontFamily: 'Roboto',
+            fontWeight: 300,
+            lineHeight: '1.4',
+            marginLeft: '0px',
+            paddingTop: '0px',
+            textIndent: '0px',
+            visibility: 'visible',
+            whiteSpace: 'pre-wrap',
+            marginRight: '0px',
+            paddingLeft: '0px',
+            wordSpacing: '0px',
+            marginBottom: '0px',
+            mixBlendMode: 'normal',
+            paddingRight: '0px',
+            letterSpacing: '0px',
+            paddingBottom: '0px',
+            textTransform: 'none',
+            backdropFilter: 'none',
+            textDecoration: 'none',
+            textFormatting: 'p',
+          }"
+        />
+        <WImage
+          v-bind:blank="false"
+          v-bind:snapX="false"
+          v-bind:snapY="false"
+          v-bind:rotate="0"
+          v-bind:rounded="false"
+          clipPath=""
+          imageUrl="https://file.dev.nucal.com/5d3dc32d998c020bb22a126f171a370407da5c8e/public/2f861073-8c72-4621-9a9b-9be8487ef91d"
+          position="relative"
+          objectFit="fill"
+          v-bind:thumbnail="false"
+          blankColor="#000000"
+          defaultUrl="https://file.dev.nucal.com/2f9057712f3200f5cfc575e29a426aca6b807c36/public/fc6df702-6ee1-41cf-b45f-09d0431769e8"
+          v-bind:disability="false"
+          dataLoading="static"
+          animationName=""
+          ncTooltipText="Please write a text to display in tooltip..."
+          v-bind:nucalDataModel="{
+            type: 'NSW',
+            isList: false,
+            dynamic: true,
+            structure: [{ type: 'string', update: { type: 'dataModelForDynamicType' }, propName: 'imageUrl', displayName: 'Value' }],
+          }"
+          ncHoverBorderColor="#000000"
+          ncTappedBorderColor="#000000"
+          dataModelForDynamicType="string"
+          id="24035518-9030-4d94-90da-719e12a71359"
+          v-bind:style="{
+            width: '100%',
+            filter: 'none',
+            height: '100%',
+            zIndex: 39,
+            boxShadow: '',
+            marginTop: '0px',
+            marginLeft: '0px',
+            paddingTop: '0px',
+            textShadow: '',
+            visibility: 'visible',
+            borderColor: '#4B74FF',
+            borderStyle: 'solid',
+            marginRight: '0px',
+            paddingLeft: '0px',
+            marginBottom: '0px',
+            mixBlendMode: 'normal',
+            paddingRight: '0px',
+            paddingBottom: '0px',
+            backdropFilter: 'none',
+            borderTopWidth: '0px',
+            borderLeftWidth: '0px',
+            borderRightWidth: '0px',
+            borderBottomWidth: '0px',
+            borderTopLeftRadius: '0px',
+            borderTopRightRadius: '0px',
+            borderBottomLeftRadius: '0px',
+            borderBottomRightRadius: '0px',
+          }"
+        />
+      </SectionContainer>
+      <SectionContainer
+        v-bind:isLock="false"
         position="relative"
-        v-bind:isEnabled="true"
-        background="#151515FF"
-        linkTarget="_blank"
-        ncLinkType="link"
-        borderColor="#B3B6B7FF"
-        borderRadius="16px"
-        v-bind:resetTrigger="false"
-        animationName=""
+        background="linear-gradient(345deg, #152362FF 1%, #000000FF 51%, #363636FF 100%)"
         ncTooltipText=""
-        verticalWidth="60px"
-        formTransition="none"
-        v-bind:nucalDataModel="{ type: 'NSW', isList: false, dynamic: false, structure: [{ type: 'string', propName: 'text', displayName: 'Value' }] }"
-        verticalHeight="60px"
-        horizontalWidth="72.4479px"
-        nucalScaleWidth=""
-        toForRouterLink=""
-        horizontalHeight="37.5347px"
-        ncClickFontColor="#FFFFFF"
-        ncFocusFontColor="#FFFFFF"
-        ncHoverFontColor="#FFFFFF"
-        nucalScaleHeight=""
-        ncClickBorderColor="#B3B6B7FF"
-        ncDisableFontColor="#FFFFFF"
-        ncFocusBorderColor="#B3B6B7FF"
-        ncHoverBorderColor="#00000000"
-        ncDisableBorderColor="#00000000"
-        ncClickBackgroundColor="#00000000"
-        ncFocusBackgroundColor="#00000000"
-        ncHoverBackgroundColor="linear-gradient(148deg, #63DFF4FF 0%, #2B2AF4FF 96%)"
-        ncDisableBackgroundColor="#969696"
-        id="c9ea107e-91ac-450c-94b3-a5c670b5e0ae"
+        id="ba0ff475-430c-40ef-a128-ec8c53e8ab52"
         v-bind:style="{
           width: '100%',
-          filter: 'none',
           height: '100%',
-          zIndex: 38,
-          tabIndex: '0px',
+          zIndex: 36,
+          tabIndex: '-1',
           boxShadow: '',
-          fontStyle: 'normal',
-          marginTop: '',
-          textAlign: 'center',
-          fontFamily: 'Open Sans',
-          fontWeight: 300,
-          lineHeight: '1.4',
-          marginLeft: '',
+          marginTop: '0px',
+          marginLeft: '0px',
           paddingTop: '',
-          textIndent: '0px',
-          textShadow: '',
           visibility: 'visible',
-          whiteSpace: 'pre-wrap',
-          borderStyle: 'solid',
-          marginRight: '',
+          borderColor: '#21CA21',
+          borderStyle: 'none',
+          marginRight: '0px',
           paddingLeft: '',
-          wordSpacing: '0px',
-          marginBottom: '',
-          mixBlendMode: 'normal',
+          marginBottom: '0px',
           paddingRight: '',
-          letterSpacing: '2px',
           paddingBottom: '',
-          textTransform: 'none',
-          backdropFilter: 'none',
           borderTopWidth: '1px',
           textDecoration: 'none',
           borderLeftWidth: '1px',
           borderRightWidth: '1px',
-          horizontalHeight: '37.5347px',
           borderBottomWidth: '1px',
-          borderTopLeftRadius: '16px',
-          borderTopRightRadius: '16px',
-          borderBottomLeftRadius: '16px',
-          borderBottomRightRadius: '16px',
+          borderTopLeftRadius: '0px',
+          borderTopRightRadius: '0px',
+          borderBottomLeftRadius: '0px',
+          borderBottomRightRadius: '0px',
         }"
-      />
-      <WTextFormatting
-        text="Thank You!"
-        color="#FFFFFFFF"
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        v-bind:rotate="0"
-        position="relative"
-        highlight="transparent"
-        background="transparent"
-        v-bind:isClipping="false"
-        ncTypography="custom"
-        animationName=""
-        ncTooltipText=""
-        id="67b427ac-20e0-4e56-9f1c-fffbe94d4762"
-        v-bind:style="{
-          dir: 'ltr',
-          width: '100%',
-          bqCite: '',
-          filter: 'none',
-          height: '100%',
-          zIndex: 39,
-          fontStyle: 'normal',
-          marginTop: '0px',
-          textAlign: 'left',
-          fontFamily: 'Roboto',
-          fontWeight: 500,
-          lineHeight: '1.4',
-          marginLeft: '0px',
-          paddingTop: '0px',
-          textIndent: '0px',
-          visibility: 'visible',
-          whiteSpace: 'pre-wrap',
-          marginRight: '0px',
-          paddingLeft: '0px',
-          wordSpacing: '0px',
-          marginBottom: '0px',
-          mixBlendMode: 'normal',
-          paddingRight: '0px',
-          letterSpacing: '0px',
-          paddingBottom: '0px',
-          textTransform: 'none',
-          backdropFilter: 'none',
-          textDecoration: 'none',
-          textFormatting: 'p',
-        }"
-      />
-      <WTextFormatting
-        text="Thank you for taking the time to complete our customer form. Your input is invaluable to us as we strive to enhance your experience with our products/services. ‎"
-        color="#B3B6B7FF"
-        v-bind:snapX="false"
-        v-bind:snapY="false"
-        v-bind:rotate="0"
-        position="relative"
-        highlight="transparent"
-        background="transparent"
-        v-bind:isClipping="false"
-        ncTypography="custom"
-        animationName=""
-        ncTooltipText=""
-        id="d03375e3-3db4-458c-b072-3afdc6133bfd"
-        v-bind:style="{
-          dir: 'ltr',
-          width: '100%',
-          bqCite: '',
-          filter: 'none',
-          height: '100%',
-          zIndex: 40,
-          fontStyle: 'normal',
-          marginTop: '0px',
-          textAlign: 'left',
-          fontFamily: 'Roboto',
-          fontWeight: 300,
-          lineHeight: '1.4',
-          marginLeft: '0px',
-          paddingTop: '0px',
-          textIndent: '0px',
-          visibility: 'visible',
-          whiteSpace: 'pre-wrap',
-          marginRight: '0px',
-          paddingLeft: '0px',
-          wordSpacing: '0px',
-          marginBottom: '0px',
-          mixBlendMode: 'normal',
-          paddingRight: '0px',
-          letterSpacing: '0px',
-          paddingBottom: '0px',
-          textTransform: 'none',
-          backdropFilter: 'none',
-          textDecoration: 'none',
-          textFormatting: 'p',
-        }"
-      />
-    </SectionContainer>
-  </DropZone>
+      >
+        <WButton
+          tag="button"
+          href=""
+          v-bind:pill="false"
+          size="md"
+          text="Explore our products"
+          type="button"
+          v-bind:block="false"
+          color="#FFFFFF"
+          v-bind:snapX="false"
+          v-bind:snapY="false"
+          theme="theme--light01"
+          v-bind:rotate="0"
+          v-bind:squared="false"
+          variant="primary"
+          ncBgType="bgColor"
+          position="relative"
+          v-bind:isEnabled="true"
+          background="#151515FF"
+          linkTarget="_top"
+          ncLinkType="router_link"
+          borderColor="#B3B6B7FF"
+          borderRadius="16px"
+          v-bind:resetTrigger="false"
+          animationName=""
+          ncTooltipText=""
+          verticalWidth="60px"
+          formTransition="none"
+          v-bind:nucalDataModel="{ type: 'NSW', isList: false, dynamic: false, structure: [{ type: 'string', propName: 'text', displayName: 'Value' }] }"
+          verticalHeight="60px"
+          horizontalWidth="72.4479px"
+          nucalScaleWidth=""
+          toForRouterLink="Screen+2"
+          horizontalHeight="37.5347px"
+          ncClickFontColor="#FFFFFF"
+          ncFocusFontColor="#FFFFFF"
+          ncHoverFontColor="#FFFFFF"
+          nucalScaleHeight=""
+          ncClickBorderColor="#B3B6B7FF"
+          ncDisableFontColor="#FFFFFF"
+          ncFocusBorderColor="#B3B6B7FF"
+          ncHoverBorderColor="#00000000"
+          ncDisableBorderColor="#00000000"
+          ncClickBackgroundColor="#00000000"
+          ncFocusBackgroundColor="#00000000"
+          ncHoverBackgroundColor="linear-gradient(148deg, #63DFF4FF 0%, #2B2AF4FF 96%)"
+          ncDisableBackgroundColor="#969696"
+          id="c9ea107e-91ac-450c-94b3-a5c670b5e0ae"
+          v-bind:style="{
+            width: '100%',
+            filter: 'none',
+            height: '100%',
+            zIndex: 38,
+            tabIndex: '0px',
+            boxShadow: '',
+            fontStyle: 'normal',
+            marginTop: '',
+            textAlign: 'center',
+            fontFamily: 'Open Sans',
+            fontWeight: 300,
+            lineHeight: '1.4',
+            marginLeft: '',
+            paddingTop: '',
+            textIndent: '0px',
+            textShadow: '',
+            visibility: 'visible',
+            whiteSpace: 'pre-wrap',
+            borderStyle: 'solid',
+            marginRight: '',
+            paddingLeft: '',
+            wordSpacing: '0px',
+            marginBottom: '',
+            mixBlendMode: 'normal',
+            paddingRight: '',
+            letterSpacing: '2px',
+            paddingBottom: '',
+            textTransform: 'none',
+            backdropFilter: 'none',
+            borderTopWidth: '1px',
+            textDecoration: 'none',
+            borderLeftWidth: '1px',
+            borderRightWidth: '1px',
+            horizontalHeight: '37.5347px',
+            borderBottomWidth: '1px',
+            borderTopLeftRadius: '16px',
+            borderTopRightRadius: '16px',
+            borderBottomLeftRadius: '16px',
+            borderBottomRightRadius: '16px',
+          }"
+        />
+        <WTextFormatting
+          text="Thank You!"
+          color="#FFFFFFFF"
+          v-bind:snapX="false"
+          v-bind:snapY="false"
+          v-bind:rotate="0"
+          position="relative"
+          highlight="transparent"
+          background="transparent"
+          v-bind:isClipping="false"
+          ncTypography="custom"
+          animationName=""
+          ncTooltipText=""
+          id="67b427ac-20e0-4e56-9f1c-fffbe94d4762"
+          v-bind:style="{
+            dir: 'ltr',
+            width: '100%',
+            bqCite: '',
+            filter: 'none',
+            height: '100%',
+            zIndex: 39,
+            fontStyle: 'normal',
+            marginTop: '0px',
+            textAlign: 'left',
+            fontFamily: 'Roboto',
+            fontWeight: 500,
+            lineHeight: '1.4',
+            marginLeft: '0px',
+            paddingTop: '0px',
+            textIndent: '0px',
+            visibility: 'visible',
+            whiteSpace: 'pre-wrap',
+            marginRight: '0px',
+            paddingLeft: '0px',
+            wordSpacing: '0px',
+            marginBottom: '0px',
+            mixBlendMode: 'normal',
+            paddingRight: '0px',
+            letterSpacing: '0px',
+            paddingBottom: '0px',
+            textTransform: 'none',
+            backdropFilter: 'none',
+            textDecoration: 'none',
+            textFormatting: 'p',
+          }"
+        />
+        <WTextFormatting
+          text="Thank you for taking the time to complete our customer form. Your input is invaluable to us as we strive to enhance your experience with our products/services. ‎"
+          color="#B3B6B7FF"
+          v-bind:snapX="false"
+          v-bind:snapY="false"
+          v-bind:rotate="0"
+          position="relative"
+          highlight="transparent"
+          background="transparent"
+          v-bind:isClipping="false"
+          ncTypography="custom"
+          animationName=""
+          ncTooltipText=""
+          id="d03375e3-3db4-458c-b072-3afdc6133bfd"
+          v-bind:style="{
+            dir: 'ltr',
+            width: '100%',
+            bqCite: '',
+            filter: 'none',
+            height: '100%',
+            zIndex: 40,
+            fontStyle: 'normal',
+            marginTop: '0px',
+            textAlign: 'left',
+            fontFamily: 'Roboto',
+            fontWeight: 300,
+            lineHeight: '1.4',
+            marginLeft: '0px',
+            paddingTop: '0px',
+            textIndent: '0px',
+            visibility: 'visible',
+            whiteSpace: 'pre-wrap',
+            marginRight: '0px',
+            paddingLeft: '0px',
+            wordSpacing: '0px',
+            marginBottom: '0px',
+            mixBlendMode: 'normal',
+            paddingRight: '0px',
+            letterSpacing: '0px',
+            paddingBottom: '0px',
+            textTransform: 'none',
+            backdropFilter: 'none',
+            textDecoration: 'none',
+            textFormatting: 'p',
+          }"
+        />
+      </SectionContainer>
+    </DropZone>
+  </div>
 </template>
 <script>
 import { mapActions, mapGetters } from 'vuex';
@@ -1578,18 +1583,18 @@ import { mapActions, mapGetters } from 'vuex';
 export default {
   name: 'Screen1',
   data() {
-    return {};
+    return {
+      isProgressBarVisible: false,
+    };
   },
   props: {},
   created() {},
   mounted() {},
   computed: { ...mapGetters('source', ['getApiMappingWithChain']) },
   methods: {
-    ...mapActions('source', ['saveRecord']),
-    bindSource(chain) {
-      return this.getApiMappingWithChain(chain);
-    },
+    ...mapActions('source', ['saveRecord', 'fetchOnload']),
     createRecord() {
+      this.isProgressBarVisible = true;
       const payload = {
         records: [
           {
@@ -1604,9 +1609,25 @@ export default {
           },
         ],
       };
-      this.saveRecord(payload).then(() => {
-        this.$router.push('Screen+2');
-      });
+      if (this.$refs.fullName.$el?.value) {
+        this.saveRecord(payload)
+          .then(() => {
+            this.fetchOnload().then(() => {
+              this.$router.push('Screen+2').then(() => {
+                this.$nextTick(() => {
+                  const element = document.getElementById('b58edfe7-7394-492f-8ba6-b5433786ab8a');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                  this.isProgressBarVisible = false;
+                });
+              });
+            });
+          })
+          .catch(() => {
+            this.isProgressBarVisible = false;
+          });
+      }
     },
   },
   watch: {},
@@ -2568,6 +2589,35 @@ export default {
   [id='c79e261d-f6ac-4354-b05c-53e9003e6739'] {
     grid-area: 6/6/8/9;
     font-size: Max(Min(16rem, 12px), 2.7039182282793868rem);
+  }
+}
+.progress-overlay {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(234, 234, 234, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar {
+  width: 50%;
+  height: 6px;
+  background: repeating-linear-gradient(to right, #000, #000 10%, #ddd, #000 90%);
+  background-size: 200% 100%;
+  animation: progress-animation 1.5s ease-in-out infinite;
+}
+
+@keyframes progress-animation {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
   }
 }
 </style>

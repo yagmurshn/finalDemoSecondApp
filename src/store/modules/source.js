@@ -13,9 +13,10 @@ export default {
   },
   actions: {
     fetchOnload({ commit }) {
+      const axiosInstance = axios.create();
       const fullUrl = `${process.env.VUE_APP_API_ENDPOINT}/execute/onload/${process.env.VUE_APP_APP_ID}?runtime=true`;
-      axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
-      return axios
+      axiosInstance.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+      return axiosInstance
         .get(fullUrl)
         .then((response) => {
           const resp = response.data.data;
@@ -29,10 +30,11 @@ export default {
         });
     },
     saveRecord(context, payload) {
-      const url = 'https://api.airtable.com/v0/appowVLaDxd4jCBPI/tbl0rHvw7lOWPcPjH';
-      axios.defaults.headers.common.Authorization = 'Bearer patYrMLMZW8KWfcI4.0888aac59fa50c9f4f5107d94e60e3f66501bf79d85b24d6333d156f17df9446';
-      axios.defaults.headers.common['Content-Type'] = 'application/json';
-      return axios
+      const axiosInstance = axios.create();
+      const url = 'https://cors-anywhere.herokuapp.com/https://api.airtable.com/v0/appowVLaDxd4jCBPI/tbl0rHvw7lOWPcPjH';
+      axiosInstance.defaults.headers.common.Authorization = 'Bearer patYrMLMZW8KWfcI4.0888aac59fa50c9f4f5107d94e60e3f66501bf79d85b24d6333d156f17df9446';
+      axiosInstance.defaults.headers.common['Content-Type'] = 'application/json';
+      return axiosInstance
         .post(url, payload)
         .then((response) => {
           // eslint-disable-next-line no-console
